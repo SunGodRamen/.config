@@ -135,7 +135,6 @@ autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType typescript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType markdown setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufReadPost * if line("'"") > 0 && line("'"") <= line("$") | exe "normal! g`"" | endif
 augroup END
 
 " -------------------
@@ -287,7 +286,7 @@ set showmatch
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 " Close buffer without closing the window
-nnoremap <leader>bd :bp|bd #<CR>
+nnoremap <leader>bd :bp \| bd \| e#<CR>
 
 " -------------------
 " Terminal support

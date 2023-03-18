@@ -10,6 +10,6 @@
 let home_dir = expand('$HOME')
 let curr_dir = home_dir . '/.config/nvim'
 
-source curr_dir . '/base.vim'
+execute 'source ' . curr_dir . '/base.vim'
 
 execute 'luafile ' . curr_dir . '/lua/project-config.lua'
