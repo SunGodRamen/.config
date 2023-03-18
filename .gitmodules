@@ -1,0 +1,6 @@
+[submodule "omz-custom/plugins/zsh-autosuggestions"]
+	path = omz-custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "omz-custom/plugins/thefuck"]
+	path = omz-custom/plugins/thefuck
+	url = git@github.com:nvbn/thefuck.git

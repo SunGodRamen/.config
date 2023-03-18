@@ -59,10 +59,8 @@ PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}]𓂀'$PROMPT
 plugins=(
     git
     zsh-autosuggestions
+    thefuck
 )
-
-#     the f*ck plugin
-eval $(thefuck --alias)
 
 source $ZSH/oh-my-zsh.sh
 
