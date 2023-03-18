@@ -1,10 +1,10 @@
 #!/usr/bin/env  zsh
-export TASKRC=~/.config/taskwarrior/.taskrc
 
 function taskp() {
-    if [ -f "$(pwd)/.task/.taskrc" ]; then
+    if [ -f "$(pwd)/.taskrc" ]; then
         task rc:$(pwd)/.taskrc "$@"
     else
+        export TASKRC=~/.config/taskwarrior/.taskrc
         task "$@"
     fi
 }

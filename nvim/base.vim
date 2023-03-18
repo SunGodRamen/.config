@@ -288,7 +288,7 @@ nnoremap <leader>tv :vsplit term://bash<CR>
 " -------------------
 " Spell checking
 " -------------------
-" Enable spell checking for text and markdown files
+" Enable spell checking for text and markdon files
 autocmd FileType text,markdown setlocal spell
 " Set default language for spell checking
 set spelllang=en_us
@@ -316,14 +316,14 @@ nnoremap <leader>ss :setlocal spell!<CR>
 " Asynchronous Lint Engine (ALE) configuration
 " -------------------
 " Uncomment the following lines if you wish to use ALE for linting and fixing your code
-" Plug 'dense-analysis/ale'
-" let g:ale_linters_explicit = 1
-" let g:ale_completion_enabled = 1
-" let g:ale_sign_error = '✖'
-" let g:ale_sign_warning = '⚠'
-" let g:ale_echo_msg_error_str = 'E'
-" let g:ale_echo_msg_warning_str = 'W'
-" let g:ale_echo_msg_format = '[%linter%] %code: %%s %severity%'
+Plug 'dense-analysis/ale'
+let g:ale_linters_explicit = 1
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %code: %%s %severity%'
 
 " -------------------
 " Language-specific configuration
@@ -358,12 +358,12 @@ nnoremap <leader>ss :setlocal spell!<CR>
 " Rainbow parentheses configuration
 " -------------------
 " Uncomment the following lines if you wish to use rainbow parentheses for easier visual tracking
-" Plug 'luochen1990/rainbow'
-" let g:rainbow_active = 1
-" let g:rainbow_conf = {
-" \ 'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-" \ 'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta', 'lightred'],
-" }
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+\ 'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\ 'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta', 'lightred']
+\ }
 
 " -------------------
 " FZF configuration
