@@ -2,6 +2,9 @@
   <h2>Neovim Configuration Overview</h2>
   <p>This is an overview of the Neovim configuration provided. The configuration is designed for Unix systems and
     provides general preferences, plugin configurations, autocommands, custom functions, and additional settings.</p>
+    <h2>Custom Commands for Toggling Language-Specific Configurations in Neovim</h2>
+    <p>This feature allows you to toggle language-specific configurations on and off in Neovim using custom commands. The commands are:</p>
+    <ul><li><code>:CFRust</code> - Toggle Rust configuration</li><li><code>:CFRuby</code> - Toggle Ruby configuration</li><li><code>:CFFountain</code> - Toggle Fountain configuration</li></ul>
   <h3>General Preferences</h3>
   <ul>
     <li>Sets encoding, hidden, nowrap, backspace, tab settings, and more</li>

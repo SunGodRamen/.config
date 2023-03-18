@@ -8,7 +8,6 @@
 #   variable=$HOME/task
 #   variable=$VALUE
 
-
 # Files
 data.location=/Users/AVONSTU1/.task
 
@@ -20,7 +19,6 @@ data.location=/Users/AVONSTU1/.task
 
 include /usr/local/share/doc/task/rc/dark-16.theme
 news.version=2.6.0
-
 
 # Added by Ra
 'alias' - tw
