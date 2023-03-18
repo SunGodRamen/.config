@@ -20,10 +20,6 @@ syntax enable
 " Enable file type detection and plugins
 filetype plugin indent on
 
-" Set the colorscheme
-colorscheme gruvbox
-set background=dark
-
 " Enable line numbering
 set number
 
@@ -84,3 +80,6 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_enter = 0
+
+" Ensure rust_analyzer is started when Rust filetype is detected
+autocmd FileType rust lua require'lspconfig'.rust_analyzer.setup{}

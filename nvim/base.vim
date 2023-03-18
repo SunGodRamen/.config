@@ -15,7 +15,6 @@ set softtabstop=4
 set smartindent
 set autoindent
 set number
-set relativenumber
 set cursorline
 set showmatch
 set hlsearch
@@ -148,8 +147,6 @@ endfunction
 command! WStrip call DeleteTrailingWS()
 autocmd FileType * autocmd BufWritePre <buffer> :call DeleteTrailingWS()
 
-" Clear search highlights with <leader><space>
-" -------------------
 " Language Server Protocol (LSP) configuration
 " -------------------
 " Installing the 'neovim' Python package is needed for LSP support
@@ -163,13 +160,6 @@ autocmd FileType * autocmd BufWritePre <buffer> :call DeleteTrailingWS()
 " end
 " }
 " EOF
-
-" -------------------
-" Color scheme
-" -------------------
-" Uncomment the following lines to set your preferred color scheme
-" syntax on
-" colorscheme solarized8_dark
 
 " -------------------
 " Additional settings
@@ -323,15 +313,6 @@ nnoremap <leader>ss :setlocal spell!<CR>
 " let g:indentLine_showFirstIndentLevel = 1
 
 " -------------------
-" Gruvbox color scheme
-" -------------------
-" Uncomment the following lines if you wish to use the Gruvbox color scheme
-" Plug 'morhetz/gruvbox'
-" colorscheme gruvbox
-" set background=dark
-" let g:gruvbox_contrast_dark = 'medium'
-
-" -------------------
 " Asynchronous Lint Engine (ALE) configuration
 " -------------------
 " Uncomment the following lines if you wish to use ALE for linting and fixing your code
@@ -417,19 +398,19 @@ nnoremap <leader>ss :setlocal spell!<CR>
 " Plug 'easymotion/vim-easymotion'
 " nnoremap <leader><leader> <Plug>(easymotion-prefix)
 
-" -------------------
-" vim-startify configuration
-" -------------------
-" Uncomment the following lines if you wish to use vim-startify for a customizable start screen
-" Plug 'mhinz/vim-startify'
-" let g:startify_custom_header = [' _ _ _ _ ',
-" \ ' __ | | __ | | | || | ___ _ __ ___ ',
-" \ ' / | __/ _ | |/ -) | ' / -) _ ` _ \ ',
-" \ ' _, |__,|_|___|_|||__, || ',
-" \ '|/ |__/ ']
-" let g:startify_session_autoload = 1
-" let g:startify_session_delete_buffers = 1
-" let g:startify_enable_special = 0
+"-------------------
+"vim-startify configuration
+"-------------------
+"Uncomment the following lines if you wish to use vim-startify for a customizable start screen
+"Plug 'mhinz/vim-startify'
+"let g:startify_custom_header = [' _ _ _ _ ',
+"\ ' __ | | __ | | | || | ___ _ __ ___ ',
+"\ ' / | __/ _ | |/ -) | ' / -) _ ` _ \ ',
+"\ ' _, |__,|_|___|_|||__, || ',
+"\ '|/ |__/ ']
+"let g:startify_session_autoload = 1
+"let g:startify_session_delete_buffers = 1
+"let g:startify_enable_special = 0
 
 " -------------------
 " vim-sneak configuration
