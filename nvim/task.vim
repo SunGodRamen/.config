@@ -53,11 +53,11 @@ let g:taskwiki_data_location = '~/Dropbox/taskwiki/'
 let g:taskwiki_tmux_session_name = 'taskwiki'
 
 " Set key bindings for Taskwiki
-map <Leader>tw :TaskWiki<CR>
-map <Leader>tn :TaskWikiNext<CR>
-map <Leader>tp :TaskWikiPrev<CR>
-map <Leader>tg :TaskWikiGoto<CR>
-map <Leader>tc :TaskWikiCalendar<CR>
-map <Leader>td :TaskWikiDone<CR>
-map <Leader>tm :TaskWikiModify<CR>
-map <Leader>ta :TaskWikiAdd<CR>
+map <Leader>twk :TaskWiki<CR>
+map <Leader>tnk :TaskWikiNext<CR>
+map <Leader>tpk :TaskWikiPrev<CR>
+map <Leader>tgk :TaskWikiGoto<CR>
+map <Leader>tck :TaskWikiCalendar<CR>
+map <Leader>tdk :TaskWikiDone<CR>
+map <Leader>tmk :TaskWikiModify<CR>
+map <Leader>tak :TaskWikiAdd<CR>
