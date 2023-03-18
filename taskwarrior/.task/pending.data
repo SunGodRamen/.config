@@ -1,3 +1,0 @@
-[description:"ingredient script - lua script nested in directory according to mnemonic pattern" entry:"1668257923" modified:"1668265785" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
-[description:"app toggle script - try lua, fallback on applescript" entry:"1668257936" modified:"1668265822" project:"strm-dk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
-[description:"lua script that reads the stacked ingredient buttons, checks the map location, and either executes the script or shows feedack that pattern was not previously mapped" entry:"1668257945" modified:"1668265916" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
