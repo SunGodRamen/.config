@@ -1,9 +1,5 @@
-# [Created by task 2.6.2 10/29/2022 14:02:02]
-# Taskwarrior program configuration file.
-# For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
-# 'man task-sync' or 'man taskrc'
+# '$ task show'
 
-# Here is an example of entries that use the default, override and blank values
 #   variable=foo   -- By specifying a value, this overrides the default
 #   variable=      -- By specifying no value, this means no default
 #   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
@@ -12,10 +8,9 @@
 #   variable=$HOME/task
 #   variable=$VALUE
 
-# Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/Users/AVONSTU1/.config/taskwarrior/.task
+data.location=/Users/AVONSTU1/.task
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
@@ -23,28 +18,18 @@ data.location=/Users/AVONSTU1/.config/taskwarrior/.task
 #data.location=~/.local/share/task
 #hooks.location=~/.config/task/hooks
 
-# Color theme (uncomment one to use)
-include solarized-dark-256.theme
-
-news.version=2.6.0
-
-include /usr/local/share/doc/task/rc/holidays-US.rc
 include /usr/local/share/doc/task/rc/dark-16.theme
-
-
-# -with love, task-warrior team
-
-
+news.version=2.6.0
 
 
 # Added by Ra
-#  'alias' - tw
-shell.prompt=tw>
+'alias' - tw
+shell.prompt=get`r_done>
 
 include no-color.theme
-verbose=no
+verbose=yes
 confirmation=no
-echo.command=no
+echo.command=yes
 nag=""
 
 next=5
@@ -52,4 +37,5 @@ complete.all.projects=no
 complete.all.tags=no
 search.case.sensitive=no
 
-
+rc.report.next.filter=status:pending,+UNBLOCKED 
+report.next.sort=status-,start-,priority-,project+,due+
