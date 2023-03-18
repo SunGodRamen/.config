@@ -1,0 +1,69 @@
+time 1668257923
+new [description:"button script for app toggle" entry:"1668257923" modified:"1668257923" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+---
+time 1668257936
+new [description:"button script for stack toggle" entry:"1668257936" modified:"1668257936" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668257945
+new [description:"button script for layer" entry:"1668257945" modified:"1668257945" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+---
+time 1668265220
+old [description:"button script for app toggle" entry:"1668257923" modified:"1668257923" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+new [description:"button script for app toggle" entry:"1668257923" modified:"1668265220" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+---
+time 1668265220
+old [description:"button script for layer" entry:"1668257945" modified:"1668257945" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+new [description:"button script for layer" entry:"1668257945" modified:"1668265220" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+---
+time 1668265275
+old [description:"button script for stack toggle" entry:"1668257936" modified:"1668257936" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"button script for stack toggle" entry:"1668257936" modified:"1668265275" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265425
+old [description:"button script for stack toggle" entry:"1668257936" modified:"1668265275" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"\/from\/to" entry:"1668257936" modified:"1668265425" project:"strmDk" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265442
+old [description:"\/from\/to" entry:"1668257936" modified:"1668265425" project:"strmDk" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"\/from\/to +" entry:"1668257936" modified:"1668265442" project:"strmDk" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265458
+old [description:"\/from\/to +" entry:"1668257936" modified:"1668265442" project:"strmDk" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"\/from\/to" entry:"1668257936" modified:"1668265458" project:"strmDk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265472
+old [description:"\/from\/to" entry:"1668257936" modified:"1668265458" project:"strmDk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"\/from\/to" entry:"1668257936" modified:"1668265472" project:"strm-dk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265493
+old [description:"button script for app toggle" entry:"1668257923" modified:"1668265220" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+new [description:"\/from\/to" entry:"1668257923" modified:"1668265493" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+---
+time 1668265515
+old [description:"button script for layer" entry:"1668257945" modified:"1668265220" status:"pending" tags:"strmdk" tags_strmdk:"x" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+new [description:"\/from\/to" entry:"1668257945" modified:"1668265515" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+---
+time 1668265566
+old [description:"\/from\/to" entry:"1668257945" modified:"1668265515" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+new [description:"execute script" entry:"1668257945" modified:"1668265566" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+---
+time 1668265630
+old [description:"\/from\/to" entry:"1668257936" modified:"1668265472" project:"strm-dk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"ingredient script" entry:"1668257936" modified:"1668265630" project:"strm-dk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265650
+old [description:"\/from\/to" entry:"1668257923" modified:"1668265493" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+new [description:"app toggle script" entry:"1668257923" modified:"1668265650" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+---
+time 1668265785
+old [description:"app toggle script" entry:"1668257923" modified:"1668265650" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+new [description:"ingredient script - lua script nested in directory according to mnemonic pattern" entry:"1668257923" modified:"1668265785" status:"pending" uuid:"73b9778c-c2a0-4c99-986f-2a29bb3e611c"]
+---
+time 1668265822
+old [description:"ingredient script" entry:"1668257936" modified:"1668265630" project:"strm-dk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+new [description:"app toggle script - try lua, fallback on applescript" entry:"1668257936" modified:"1668265822" project:"strm-dk" status:"pending" uuid:"77b7d3c9-7306-43c9-bf2b-2d92fb33cf79"]
+---
+time 1668265916
+old [description:"execute script" entry:"1668257945" modified:"1668265566" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+new [description:"lua script that reads the stacked ingredient buttons, checks the map location, and either executes the script or shows feedack that pattern was not previously mapped" entry:"1668257945" modified:"1668265916" status:"pending" uuid:"79e24686-8dae-4dcc-b937-f3dc60111bbd"]
+---
