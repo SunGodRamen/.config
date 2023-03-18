@@ -66,7 +66,7 @@ eval $(thefuck --alias)
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
