@@ -1,7 +1,8 @@
 #!/usr/bin/env  zsh
+export TASKRC=~/.config/taskwarrior/.taskrc
 
 function taskp() {
-    if [ -f "$(pwd)/.taskrc" ]; then
+    if [ -f "$(pwd)/.task/.taskrc" ]; then
         task rc:$(pwd)/.taskrc "$@"
     else
         task "$@"
@@ -9,7 +10,7 @@ function taskp() {
 }
 
 #   Create a custom .taskrc file in your project directory:
-#       touch /path/to/your/project/.taskrc
+#       touch /path/to/your/project/.task/.taskrc
 #   Edit the custom .taskrc file and add the following lines:
 #       data.location=/path/to/your/project/.task
 #       hooks.location=/path/to/your/project/.task/hooks
