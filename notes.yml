@@ -1,0 +1,24 @@
+- name: PiHost Keyboard
+  description: A QMK-based keyboard with an onboard Raspberry Pi that acts as a host to a display and a USB keyboard connected via SPI.
+  details:
+    - Enables on-the-fly mapping changes of input keyboard and extensive output control of output keyboard.
+    - Can be used standalone and for firmware changes/flashing.
+    - Display and Ethernet port of Raspberry Pi can be used for IoT control.
+  
+- name: Choiral
+  description: A mapping of English phonemes to musical chords designed to express the tone and rhythm of spoken language through music.
+  details:
+    - Optimizes similarity of phoneme progression in English sentences to common chord progressions in music.
+
+- name: Extended Macro Syntax
+  description: An extension of QMK's macro syntax for text generation, allowing for control clauses, variables, procedures, and functions.
+  details:
+    - Enables creation of complex macros for generating customized text.
+    - Adds a new level of customization to QMK-powered keyboards.
+
+- name: HID Scripting Language
+  description: A custom HID driver for search and replace operations on text by communicating with the keyboard.
+  details:
+    - Enables powerful search and replace operations directly on the keyboard.
+    - Eliminates need for separate computer or software program.
+
