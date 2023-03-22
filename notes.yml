@@ -5,30 +5,15 @@
     - Can be used standalone and for firmware changes/flashing.
   features:
     - Enables on-the-fly mapping changes of input keyboard and extensive output control of output keyboard.
-    - Display and Ethernet port of Raspberry Pi can be used for IoT control.
-    - Expandable storage via microSD card slot for additional customization options and backups.
     - Customized Workstations, Users can create personalized workstation experiences, with custom key mappings, macros, and shortcuts tailored to their workflow and specific software applications.
     - Remote Device Management, The keyboard can be used to control and manage remote devices, servers, or IoT devices through the internet connection, allowing users to perform tasks like remote monitoring, maintenance, and troubleshooting.
     - Mobile Workstation, The compact form factor and onboard display make the PiHost Keyboard ideal for portable use. Users can connect to remote machines or virtual desktops and work from anywhere with an internet connection.
-    - Print onboard files as generated keyboard output
+    - GB-Sized Macros, Print onboard files as generated keyboard output
     - Gaming, Customizable key mappings, macros, and RGB lighting make the keyboard suitable for gaming, providing users with an enhanced, personalized gaming experience.
     - Assistive Technology, The keyboard can be configured to meet the needs of users with disabilities, with options for customized key mappings, on-screen keyboards, or integration with accessibility-focused peripherals.
     - Home Automation, The PiHost Keyboard's IoT capabilities allow users to control and monitor smart home devices, from lights and thermostats to security systems and appliances, all through a single interface.
     - Media Center Control, Users can use the PiHost Keyboard to control media center software or streaming devices, providing a convenient way to navigate and manage media libraries.
-
-- name: Choiral
-  description: A mapping of English phonemes to musical chords designed to express the tone and rhythm of spoken language through music.
-  details:
-    - Optimizes similarity of phoneme progression in English sentences to common chord progressions in music.
-  features:
-    - Music composition inspiration, Generates unique chord progressions from spoken language.
-    - Enhances audiovisual experiences, Aligns music with dialogue or narration for immersive experiences in movies, video games, and virtual reality.
-    - Speech-to-music conversion, Transforms speeches, poetry readings, or other spoken performances into musical compositions.
-    - Music-to-speech conversion, Transforms musical compositions or performances into spoken language, including narrations, poetry, or other forms of verbal expression.
-    - Music therapy applications, Translates personal statements, memories, or goals into meaningful musical experiences.
-    - Text-based generative music, Combines with generative algorithms to create music based on user-generated or existing text.
-    - Human-computer interaction, Enables communication with computers through musical instruments.
-    - Alternative communication method, Supports individuals with speech impairments or those who find verbal communication challenging
+    - Expandable storage via microSD card slot for additional customization options and backups.
 
 - name: Extended Macro Syntax
   description: An extension of QMK's macro syntax for text generation, allowing for runtime definition of control clauses, variables, procedures, and functions to control keyboard output.
@@ -44,8 +29,8 @@
     - User-defined functions and procedures, enabling advanced macro creation and customization
     - Allows users to process data in real-time, such as filtering, sorting, or reformatting incoming data streams from sensors, logs, or other sources.
 
-- name: HID Scripting Language
-  description: A custom HID driver to respond to an Extended Macro keyboard with text for use in operations.
+- name: Extended Macro Syntax-Driver Library
+  description: A custom HID driver and library for the Extended Macro keyboard, to interact with text on the host system.
   details:
     - Eliminates need for separate computer or software program to interact with host state.
   features:
@@ -55,3 +40,17 @@
     - Direct keyboard execution, Enables text processing operations to be executed directly on the keyboard, without the need for additional software or tools, streamlining the user experience and improving productivity.
     - Cross-platform compatibility, As a custom HID driver, it has the potential to be compatible with a wide range of devices and operating systems, allowing users to take advantage of the text processing functionality on any device that supports HID communication.
     - Customizable macros, Offers users the ability to create and customize macros for text processing tasks, tailoring the functionality to suit their specific needs and requirements.
+
+- name: Choiral
+  description: A mapping of English phonemes to musical chords designed to express the tone and rhythm of spoken language through music.
+  details:
+    - Optimizes similarity of phoneme progression in English sentences to common chord progressions in music.
+  features:
+    - Music composition inspiration, Generates unique chord progressions from spoken language.
+    - Enhances audiovisual experiences, Aligns music with dialogue or narration for immersive experiences in movies, video games, and virtual reality.
+    - Speech-to-music conversion, Transforms speeches, poetry readings, or other spoken performances into musical compositions.
+    - Music-to-speech conversion, Transforms musical compositions or performances into spoken language, including narrations, poetry, or other forms of verbal expression.
+    - Music therapy applications, Translates personal statements, memories, or goals into meaningful musical experiences.
+    - Text-based generative music, Combines with generative algorithms to create music based on user-generated or existing text.
+    - Human-computer interaction, Enables communication with computers through musical instruments.
+    - Alternative communication method, Supports individuals with speech impairments or those who find verbal communication challenging
