@@ -1,8 +1,9 @@
 - name: PiHost Keyboard
-  description: A QMK-based keyboard with an onboard Raspberry Pi that acts as a host to a display and a USB keyboard connected via SPI.
+  description: A keyboard with an onboard Raspberry Pi that acts as a host to a display and as an intermediary to the keyboard connected via SPI.
   details:
-    - The Raspberry Pi acts as a host for a USB keyboard connected via SPI along with a display.
-    - Can be used standalone and for firmware changes/flashing.
+    - The Raspberry Pi and second microprocessor serve to subvert the single host protocol of USB by using SPI
+    - The Raspberry Pi runs a simple operating system to work as a standalone system with the keyboard
+    - When the device is plugged in via USB to a host device, the Raspberry Pi acts as an intermediary to keyboard input, mapping the keycode and instructing the microprocessor how to alert the host.
   features:
     - Enables on-the-fly mapping changes of input keyboard and extensive output control of output keyboard.
     - Customized Workstations, Users can create personalized workstation experiences, with custom key mappings, macros, and shortcuts tailored to their workflow and specific software applications.
@@ -16,30 +17,34 @@
     - Expandable storage via microSD card slot for additional customization options and backups.
 
 - name: QMK TextFlow
-  description: An extension of QMK's macro syntax for text generation, allowing for runtime definition of control clauses, variables, procedures, and functions to control keyboard output.
+  description: A QMK feature that introduces a powerful text generation system, enabling runtime definition of control clauses, variables, procedures, and functions using the "Compose" key to control keyboard output interactively.
   details:
-    - Enables creation of complex macros for generating customized text.
-    - Adds a new level of customization to QMK-powered keyboards.
+    - Enhances QMK-powered keyboards with advanced text generation and customization capabilities.
+    - Uses a "Compose" key to activate and deactivate the TextFlow interpreter for on-the-fly macro creation and manipulation.
     - Provides conditional execution to selectively execute certain parts of a macro based on conditions like the value of a variable or user input.
+    - Retains user-defined global variables, functions, and procedures across sessions until deallocated or the keyboard powers off.
   features:
     - Flow control statements, such as "if-then", "while-do", and "for-next" loops
-    - String manipulation functions for concatenation, substring extraction, and character replacement
     - Mathematical functions for arithmetic operations like addition, subtraction, multiplication, and division
-    - Date and time functions for retrieving and formatting dates and times
     - User-defined functions and procedures, enabling advanced macro creation and customization
+    - String manipulation functions for concatenation, substring extraction, and character replacement
+    - Date and time functions for retrieving and formatting dates and times
     - Allows users to process data in real-time, such as filtering, sorting, or reformatting incoming data streams from sensors, logs, or other sources.
+    - Intuitive and efficient use of the "Compose" key for entering and exiting the TextFlow interpreter, making it easy for users to create and manage their custom macros.
 
 - name: QMK TextFlow HID
-  description: A custom HID driver and library for the Extended Macro keyboard, to interact with text on the host system.
+  description: A custom HID driver and library for TextFlow, designed to enhance the standard scripting language and interact with text on the host system, including shell command execution and output retrieval.
   details:
-    - Eliminates need for separate computer or software program to interact with host state.
+    - Augments the TextFlow scripting language with additional functionality for increased versatility and power.
+    - Eliminates the need for a separate computer or software program to interact with host state.
   features:
-    - Text search and filtering, Provides grep-like functionality by allowing users to create macros that search for specific patterns in text and return matching lines or portions of text.
-    - Text replacement and substitution, Offers sed-like capabilities by enabling users to create macros that perform search and replace operations based on defined patterns and replacement text.
-    - Text processing and field manipulation, Mimics some of awk's features by allowing users to create macros that process text, split lines into fields, and perform calculations or manipulations based on specific criteria.
-    - Direct keyboard execution, Enables text processing operations to be executed directly on the keyboard, without the need for additional software or tools, streamlining the user experience and improving productivity.
-    - Cross-platform compatibility, As a custom HID driver, it has the potential to be compatible with a wide range of devices and operating systems, allowing users to take advantage of the text processing functionality on any device that supports HID communication.
-    - Customizable macros, Offers users the ability to create and customize macros for text processing tasks, tailoring the functionality to suit their specific needs and requirements.
+    - Text search and filtering, provides grep-like functionality by allowing users to create macros that search for specific patterns in text and return matching lines or portions of text.
+    - Text replacement and substitution, offers sed-like capabilities by enabling users to create macros that perform search and replace operations based on defined patterns and replacement text.
+    - Text processing and field manipulation, mimics some of awk's features by allowing users to create macros that process text, split lines into fields, and perform calculations or manipulations based on specific criteria.
+    - Shell command execution and output retrieval, enables users to execute shell commands within their TextFlow scripts and retrieve the output directly in their keyboard for further use in their scripts.
+    - Direct keyboard execution, allows text processing operations to be executed directly on the keyboard, without the need for additional software or tools, streamlining the user experience and improving productivity.
+    - Cross-platform compatibility, as a custom HID driver, it has the potential to be compatible with a wide range of devices and operating systems, allowing users to take advantage of the text processing functionality on any device that supports HID communication.
+    - Customizable macros, offers users the ability to create and customize macros for text processing tasks, tailoring the functionality to suit their specific needs and requirements.
 
 - name: Choiral
   description: A mapping of English phonemes to musical chords designed to express the tone and rhythm of spoken language through music.
