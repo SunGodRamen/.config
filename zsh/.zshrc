@@ -31,28 +31,21 @@
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_CUSTOM=$HOME/.config/omz-custom
 
 #     update mode
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14   
 # zstyle ':omz:update' mode disabled
-
 #     command correction
 ENABLE_CORRECTION="true"
-
 #     command hyphen mode
 HYPHEN_INSENSITIVE="true"
-
 #     waiting dots*temp (black, red, green, yellow, blue, magenta, cyan and white)
-COMPLETION_WAITING_DOTS="%F{magenta}𓈖 𓈖 𓈖%f"
-
+COMPLETION_WAITING_DOTS="%F{white}===%f"
 HIST_STAMPS="dd.mm.yyyy"
-
-##  Include-Plugins ............................................................... <<--Include-Plugins-<<
 
 plugins=(
     git
@@ -61,8 +54,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

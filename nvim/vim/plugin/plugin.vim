@@ -1,12 +1,13 @@
 "-------------------------------
 " Set up directory variables
-let home_dir = expand('$HOME')
-let plugin_dir = home_dir . '/.config/nvim/vim/plugin'
-
-" Source the  configuration file
-"execute 'source ' . plugin_dir . '/.vim'
-
+let plugin_dir = expand('$HOME') . '/.config/nvim/vim/plugin'
 
 " Source the fugitive configuration file
 execute 'source ' . plugin_dir . '/fugitive.vim'
+
+" Source the vim-sneak configuration file
+execute 'source ' . plugin_dir . '/sneak.vim'
+
+" Source the ale configuration file
+execute 'source ' . plugin_dir . '/ale.vim'
 
