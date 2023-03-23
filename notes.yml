@@ -1,3 +1,17 @@
+- name: Shephard
+  description: An IDE that runs as an image in Rancher that integrates Vim, Taskwarrior, Git, and architectural diagrams to streamline and enforce task-driven development.
+  details:
+    - Vim commands and mappings for seamless project navigation and editing
+    - Vim commands and mappings for container and image launching and management
+    - Taskwarrior configurations and task data for effective task management
+    - Architectural diagram generation and documentation
+    - Git hooks to enforce task referencing and architectural updates
+features:
+    - Custom Vim commands and mappings, to quickly create and switch between tasks, branches, and files and simplify navigation between code and documentation
+    - Taskwarrior integration, to organize and track tasks within the project and also link tasks to branches and commit messages
+    - Architectural diagram and documentation, automatically generate and update architectural diagrams based on code changes and enforce consistency between code and documentation
+    - Git hooks, enforce task references in branches and commit messages, ensure architectural diagrams are updated with code changes, deny pushes if documentation is not properly updated
+
 - name: PiHost Keyboard
   description: A keyboard with an onboard Raspberry Pi that acts as a host to a display and as an intermediary to the keyboard connected via SPI.
   details:
