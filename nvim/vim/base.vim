@@ -16,6 +16,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
 "maps the leader key followed by '/' to clear the search highlighting.
 nnoremap <leader>/ :nohlsearch<CR>
 
