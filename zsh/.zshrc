@@ -52,9 +52,7 @@ COMPLETION_WAITING_DOTS="%F{magenta}𓈖 𓈖 𓈖%f"
 
 HIST_STAMPS="dd.mm.yyyy"
 
-PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}]𓂀'$PROMPT
-
-##  Include-Plugins ....................................................................... <<--Include-Plugins-<<
+##  Include-Plugins ............................................................... <<--Include-Plugins-<<
 
 plugins=(
     git
@@ -69,7 +67,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Prompt
-PROMPT='%{$fg_bold[green]%}%n %{$fg[cyan]%}%c $(git_prompt_info)%{$fg_bold[red]%}$ %{$reset_color%}'
+PROMPT='%{$fg_bold[green]%}%D{%f/%m/%y} %D{%L:%M:%S}%{$fg[white]%}||%{$fg[cyan]%}$(git_prompt_info)%{$fg[white]%}||%{$fg_bold[yellow]%}%c%{$fg_bold[red]%}/%{$reset_color%}'
 
 # Aliases
 alias ls='ls -aG'
@@ -86,6 +84,3 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 
-
-alias rust-dev="docker run -it -v $(pwd):/app rust-dev"
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/AVONSTU1/Data/autovoice-egp9-970fca853356.json"
