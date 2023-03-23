@@ -67,7 +67,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Prompt
-PROMPT='%{$fg_bold[green]%}%D{%f/%m/%y} %D{%L:%M:%S}%{$fg[white]%}||%{$fg[cyan]%}$(git_prompt_info)%{$fg[white]%}||%{$fg_bold[yellow]%}%c%{$fg_bold[red]%}/%{$reset_color%}'
+PROMPT='%{$fg_bold[green]%}%D{%f/%m/%y} %D{%L:%M:%S}$(custom_git_prompt)%{$fg_bold[yellow]%}%c%{$fg[white]%}/%{$fg_bold[red]%} $ %{$reset_color%}'
 
 # Aliases
 alias ls='ls -aG'
