@@ -8,15 +8,15 @@
 "
 "-------------------------------
 " Set up directory variables
-let home_dir = expand('$HOME')
-let curr_dir = home_dir . '/.config/nvim'
+let vim_dir = expand('$HOME') . '/.config/nvim/vim'
+let lua_dir = expand('$HOME') . '/.config/nvim/lua'
 
 " Source the base configuration file
-execute 'source ' . curr_dir . '/vim/base.vim'
+execute 'source ' . vim_dir . '/base.vim'
 " Source the plugin configs 
-execute 'source ' . curr_dir . '/vim/plugin/plugin.vim'
+execute 'source ' . vim_dir . '/plugin/plugin.vim'
 
 " Source the vim project configuration file
-execute 'source ' . curr_dir . '/vim/project-config.vim'
+execute 'source ' . vim_dir . '/project-config.vim'
 " Source the Lua project configuration file
-execute 'luafile ' . curr_dir . '/lua/project-config.lua'
+execute 'luafile ' . lua_dir . '/project-config.lua'

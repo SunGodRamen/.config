@@ -1,11 +1,5 @@
 " Plugin: vim-sneak
 
-" Install vim-sneak using vim-plug
-call plug#begin('~/.vim/plugged')
-Plug 'justinmk/vim-sneak'
-call plug#end()
-
-" Configure vim-sneak
 " Set the colorscheme for sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
