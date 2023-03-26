@@ -61,7 +61,7 @@ source $ZSH/oh-my-zsh.sh
 PROMPT='%{$fg_bold[green]%}%D{%d/%m/%y} %D{%L:%M:%S}$(custom_git_prompt)%{$fg_bold[yellow]%}%B$(if [[ $PWD == $HOME ]]; then echo "\$HOME"; else echo "%c"; fi)%b%{$fg[white]%}/%{$fg_bold[red]%} $ %{$reset_color%}'
 
 # Aliases
-alias ls='ls -aG'
+alias ls='ls -1aG'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'

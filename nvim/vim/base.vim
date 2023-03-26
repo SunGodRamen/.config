@@ -3,14 +3,19 @@
 " -------------------
 " maps the leader key to spacebar
 let mapleader = "\<Space>"
+
 " maps the leader key followed by 'w' to write the current buffer to file.
 nnoremap <leader>w :w<CR>
+
 "maps the leader key followed by 'q' to quit Vim.
 nnoremap <leader>q :q<CR>
+
 "maps the leader key followed by 'h' to open the Vim help.
-nnoremap <leader>h :help<CR>
+nnoremap <leader>? :help<CR>
+
 "maps the leader key followed by another leader key to switch to the previous buffer.
 nnoremap <leader><leader> <C-^>
+
 "map the Ctrl key plus the h, j, k, and l keys, respectively, to move to the left, down, up, and right split windows.
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -20,6 +25,21 @@ nnoremap <C-l> <C-w>l
 "maps the leader key followed by '/' to clear the search highlighting.
 nnoremap <leader>/ :nohlsearch<CR>
 
+"swap two lines by specifying line numbers
+"function! SwapLines(line1, line2) abort
+"    if a:line1 == a:line2
+"        echo "The line numbers are the same. No swapping needed."
+"        return
+"    endif
+"
+"    let l:temp line = getline(a:line1)
+"    call setline(a:line1, getline(a:line2))
+"    call setline(a:line2, l:temp line)
+"endfunction
+
+"command! -noargs=2 Swap call
+"SwapLines(<f-args>)
+
 " -------------------
 " Source native configuration files
 " -------------------
@@ -27,6 +47,9 @@ nnoremap <leader>/ :nohlsearch<CR>
 let vim_dir = expand('$HOME') . '/.config/nvim/vim'
 " Source the base configuration file
 execute 'source ' . vim_dir . '/netrw.vim'
+" Source the base configuration file
+execute 'source ' . vim_dir . '/register_window.vim'
+
 
 " -------------------
 " General preferences
@@ -74,7 +97,7 @@ set shortmess+=c
 "Sets 'updatetime' to 300 milliseconds to decrease the delay for Vim to detect changes in files.
 set updatetime=300
 "Sets 'signcolumn' to 'yes' to always display the sign column.
-set signcolumn=yes
+set signcolumn=no
 "Sets 'splitright' and 'splitbelow' to open new split windows on the right and below the current window, respectively.
 set splitright
 set splitbelow
