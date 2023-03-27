@@ -7,8 +7,14 @@ let mapleader = "\<Space>"
 " maps the leader key followed by 'w' to write the current buffer to file.
 nnoremap <leader>w :w<CR>
 
+"map leader leader W to write, quit
+nnoremap <leader><leader>W :wq<CR>
+
 "maps the leader key followed by 'q' to quit Vim.
 nnoremap <leader>q :q<CR>
+
+"map leader leader Q to force quit
+nnoremap <leader><leader>Q :q!<CR>
 
 "maps the leader key followed by 'h' to open the Vim help.
 nnoremap <leader>? :help<CR>

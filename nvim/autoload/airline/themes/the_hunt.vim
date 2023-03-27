@@ -15,7 +15,7 @@ let g:airline#themes#the_hunt#palette = {}
 let g:airline#themes#the_hunt#palette.normal = {
       \ 'airline_a': s:deep_green,
       \ 'airline_b': s:deep_red,
-      \ 'airline_c': s:goldenrod,
+      \ 'airline_c': s:dark_chocolate,
       \ 'airline_x': s:goldenrod,
       \ 'airline_y': s:deep_green,
       \ 'airline_z': s:deep_red,
@@ -25,7 +25,7 @@ let g:airline#themes#the_hunt#palette.normal = {
 let g:airline#themes#the_hunt#palette.insert = {
       \ 'airline_a': s:goldenrod,
       \ 'airline_b': s:deep_red,
-      \ 'airline_c': s:deep_green,
+      \ 'airline_c': s:dark_chocolate,
       \ 'airline_x': s:goldenrod,
       \ 'airline_y': s:deep_green,
       \ 'airline_z': s:deep_red,
@@ -35,7 +35,7 @@ let g:airline#themes#the_hunt#palette.insert = {
 let g:airline#themes#the_hunt#palette.visual = {
       \ 'airline_a': s:deep_red,
       \ 'airline_b': s:deep_green,
-      \ 'airline_c': s:goldenrod,
+      \ 'airline_c': s:dark_chocolate,
       \ 'airline_x': s:goldenrod,
       \ 'airline_y': s:deep_green,
       \ 'airline_z': s:deep_red,
@@ -45,7 +45,7 @@ let g:airline#themes#the_hunt#palette.visual = {
 let g:airline#themes#the_hunt#palette.replace = {
       \ 'airline_a': s:deep_red,
       \ 'airline_b': s:goldenrod,
-      \ 'airline_c': s:deep_green,
+      \ 'airline_c': s:dark_chocolate,
       \ 'airline_x': s:goldenrod,
       \ 'airline_y': s:deep_green,
       \ 'airline_z': s:deep_red,
@@ -55,4 +55,10 @@ let g:airline#themes#the_hunt#palette.replace = {
 let g:airline#themes#the_hunt#palette.tabline = {
       \ 'airline_t': s:goldenrod,
       \ 'airline_t_active': s:deep_green,
+      \ 'airline_tabsel': s:deep_green,
+      \ 'airline_tab': s:goldenrod,
+      \ 'airline_tabhid': s:deep_red,
+      \ 'airline_tablabel': s:dark_chocolate,
+      \ 'airline_tabmod': s:deep_red,
       \ }
+
