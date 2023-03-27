@@ -8,7 +8,15 @@ let g:airline_section_b = 'ⓑ %f%m'
 let g:airline_section_c = 'ⓒ %b %l:%c'
 let g:airline_section_x = 'ⓧ %y'
 let g:airline_section_y = 'ⓨ %p%%'
-let g:airline_section_z = 'ⓩ %=%I'
+
+function! GitCommitMessage()
+  let l:blame_output = system('git blame -L ' . line('.') . ',' . line('.') . ' -- ' . expand('%'))
+  let l:commit_hash = matchstr(l:blame_output, '\v^[0-9a-f]{7,40}')
+  let l:commit_message = system('git show -s --format=%s ' . l:commit_hash)
+  return strpart(l:commit_message, 0, 25)
+endfunction
+
+let g:airline_section_z = "%{GitCommitMessage()} ⓩ"
 
 let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '❯'
