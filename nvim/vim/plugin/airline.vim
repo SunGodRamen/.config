@@ -16,7 +16,7 @@ let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
 
 " Choose a color theme
-let g:airline_theme = 'solarized'
+"let g:airline_theme = 'solarized'
 
 " Show or hide the status bar
 let g:airline#extensions#tabline#enabled = 1

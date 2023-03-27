@@ -73,3 +73,18 @@ features:
     - Text-based generative music, Combines with generative algorithms to create music based on user-generated or existing text.
     - Human-computer interaction, Enables communication with computers through musical instruments.
     - Alternative communication method, Supports individuals with speech impairments or those who find verbal communication challenging
+
+
+- name: RapidERD
+  description: A hotkey based, mouse integrated, ERD diagraming tool to support on the fly communication of structural concepts.
+  details:
+    - Hotkey window
+    - Vim-style, normal mode hotkeys with different interpretations based on what the mouse cursor hovers over.
+  features:
+    - Hotkey-driven diagram creation, Quickly create and edit ERD diagrams using hotkeys, minimizing the need for mouse clicks.
+    - Mouse hover context sensitivity, Hotkeys have different functionalities based on the element the mouse cursor is hovering over, allowing for more efficient diagram editing.
+    - Customizable hotkey mappings, Users can customize hotkeys according to their preferences, increasing ease of use and productivity.
+    - Automatic layout adjustment, Diagram elements rearrange automatically to maintain a clean and organized layout during editing.
+    - Entity relationship templates, Predefined templates for common entity relationships, speeding up the diagram creation process.
+    - Collaboration support, Real-time collaboration with multiple users, enabling seamless communication of structural concepts., Export diagrams in various formats, such as PNG, JPEG, PDF, and SVG for easy sharing and documentation.
+    - Undo/Redo functionality, Efficiently undo or redo actions, allowing for quick corrections and adjustments during diagram creation.
