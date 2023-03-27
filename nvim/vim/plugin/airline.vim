@@ -16,7 +16,8 @@ let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
 
 " Choose a color theme
-"let g:airline_theme = 'solarized'
+source ~/.config/nvim/autoload/airline/themes/the_hunt.vim
+let g:airline_theme = 'the_hunt'
 
 " Show or hide the status bar
 let g:airline#extensions#tabline#enabled = 1
