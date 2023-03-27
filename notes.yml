@@ -6,7 +6,7 @@
     - Taskwarrior configurations and task data for effective task management
     - Architectural diagram generation and documentation
     - Git hooks to enforce task referencing and architectural updates
-features:
+  features:
     - Custom Vim commands and mappings, to quickly create and switch between tasks, branches, and files and simplify navigation between code and documentation
     - Taskwarrior integration, to organize and track tasks within the project and also link tasks to branches and commit messages
     - Architectural diagram and documentation, automatically generate and update architectural diagrams based on code changes and enforce consistency between code and documentation
