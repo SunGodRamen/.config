@@ -1,90 +1,327 @@
 - name: Shephard
-  description: An IDE that runs as an image in Rancher that integrates Vim, Taskwarrior, Git, and architectural diagrams to streamline and enforce task-driven development.
+  description: |
+    An IDE that runs as an image in Rancher that integrates Vim,
+     Taskwarrior, Git, and architectural diagrams to streamline
+     and enforce task-driven development.
   details:
-    - Vim commands and mappings for seamless project navigation and editing
-    - Vim commands and mappings for container and image launching and management
-    - Taskwarrior configurations and task data for effective task management
-    - Architectural diagram generation and documentation
-    - Git hooks to enforce task referencing and architectural updates
+    - |
+     Vim commands and mappings for seamless project navigation
+      and editing
+    - |
+     Vim commands and mappings for container and image
+      launching and management
+    - |
+     Taskwarrior configurations and task data for effective
+      task management
+    - |
+     Architectural diagram generation and documentation
+    - |
+     Git hooks to enforce task referencing and architectural
+      updates
   features:
-    - Custom Vim commands and mappings, to quickly create and switch between tasks, branches, and files and simplify navigation between code and documentation
-    - Taskwarrior integration, to organize and track tasks within the project and also link tasks to branches and commit messages
-    - Architectural diagram and documentation, automatically generate and update architectural diagrams based on code changes and enforce consistency between code and documentation
-    - Git hooks, enforce task references in branches and commit messages, ensure architectural diagrams are updated with code changes, deny pushes if documentation is not properly updated
+    - |
+      Custom Vim commands and mappings, to quickly create and
+       switch between tasks, branches, and files and simplify
+        navigation between code and documentation
+    - |
+      Taskwarrior integration, to organize and track tasks
+       within the project and also link tasks to branches and
+       commit messages
+    - |
+      Architectural diagram and documentation, automatically
+       generate and update architectural diagrams based on code
+       changes and enforce consistency between code and
+       documentation
+    - |
+      Git hooks, enforce task references in branches and commit
+       messages, ensure architectural diagrams are updated with
+       code changes, deny pushes if documentation is not 
+       properly updated
 
 - name: PiHost Keyboard
-  description: A keyboard with an onboard Raspberry Pi that acts as a host to a display and as an intermediary to the keyboard connected via SPI.
+  description: |
+    A keyboard with an onboard Raspberry Pi that acts as a host
+     to a display and as an intermediary to the keyboard
+     connected via SPI.
   details:
-    - The Raspberry Pi and second microprocessor serve to subvert the single host protocol of USB by using SPI
-    - The Raspberry Pi runs a simple operating system to work as a standalone system with the keyboard
-    - When the device is plugged in via USB to a host device, the Raspberry Pi acts as an intermediary to keyboard input, mapping the keycode and instructing the microprocessor how to alert the host.
+    - |
+     The Raspberry Pi and second microprocessor serve to subvert
+      the single host protocol of USB by using SPI
+    - |
+     The Raspberry Pi runs a simple operating system to work as
+      a standalone system with the keyboard
+    - |
+     When the device is plugged in via USB to a host device,
+      the Raspberry Pi acts as an intermediary to keyboard input,
+      mapping the keycode and instructing the microprocessor how
+      to alert the host.
   features:
-    - Enables on-the-fly mapping changes of input keyboard and extensive output control of output keyboard.
-    - Customized Workstations, Users can create personalized workstation experiences, with custom key mappings, macros, and shortcuts tailored to their workflow and specific software applications.
-    - Remote Device Management, The keyboard can be used to control and manage remote devices, servers, or IoT devices through the internet connection, allowing users to perform tasks like remote monitoring, maintenance, and troubleshooting.
-    - Mobile Workstation, The compact form factor and onboard display make the PiHost Keyboard ideal for portable use. Users can connect to remote machines or virtual desktops and work from anywhere with an internet connection.
-    - GB-Sized Macros, Print onboard files as generated keyboard output
-    - Gaming, Customizable key mappings, macros, and RGB lighting make the keyboard suitable for gaming, providing users with an enhanced, personalized gaming experience.
-    - Assistive Technology, The keyboard can be configured to meet the needs of users with disabilities, with options for customized key mappings, on-screen keyboards, or integration with accessibility-focused peripherals.
-    - Home Automation, The PiHost Keyboard's IoT capabilities allow users to control and monitor smart home devices, from lights and thermostats to security systems and appliances, all through a single interface.
-    - Media Center Control, Users can use the PiHost Keyboard to control media center software or streaming devices, providing a convenient way to navigate and manage media libraries.
-    - Expandable storage via microSD card slot for additional customization options and backups.
+    - |
+      Enables on-the-fly mapping changes of input keyboard and
+       extensive output control of output keyboard.
+    - |
+      Customized Workstations, Users can create personalized
+       workstation experiences, with custom key mappings,
+       macros, and shortcuts tailored to their workflow and
+       specific software applications.
+    - |
+      Remote Device Management, The keyboard can be used to
+       control and manage remote devices, servers, or IoT devices
+       through the internet connection, allowing users to perform
+       tasks like remote monitoring, maintenance, and
+       troubleshooting.
+    - |
+      Mobile Workstation, The compact form factor and onboard
+       display make the PiHost Keyboard ideal for portable use.
+       Users can connect to remote machines or virtual desktops
+       and work from anywhere with an internet connection.
+    - GB-Sized Macros, Print onboard files as generated keyboard
+       output
+    - |
+      Gaming, Customizable key mappings, macros, and RGB lighting
+       make the keyboard suitable for gaming, providing users with
+       an enhanced, personalized gaming experience.
+    - |
+      Assistive Technology, The keyboard can be configured to meet
+       the needs of users with disabilities, with options for
+       customized key mappings, on-screen keyboards, or integration
+       with accessibility-focused peripherals.
+    - |
+      Home Automation, The PiHost Keyboard's IoT capabilities allow
+       users to control and monitor smart home devices, from lights
+       and thermostats to security systems and appliances, all 
+       through a single interface.
+    - |
+      Media Center Control, Users can use the PiHost Keyboard to
+       control media center software or streaming devices,
+       providing a convenient way to navigate and manage media
+       libraries.
+    - |
+      Expandable storage via microSD card slot for additional
+       customization options and backups.
 
 - name: QMK TextFlow
-  description: A QMK feature that introduces a powerful text generation system, enabling runtime definition of control clauses, variables, procedures, and functions using the "Compose" key to control keyboard output interactively.
+  description: |
+    A QMK feature that introduces a powerful text generation
+     system, enabling runtime definition of control clauses,
+     variables, procedures, and functions using the "Compose"
+     key to control keyboard output interactively.
   details:
-    - Enhances QMK-powered keyboards with advanced text generation and customization capabilities.
-    - Uses a "Compose" key to activate and deactivate the TextFlow interpreter for on-the-fly macro creation and manipulation.
-    - Provides conditional execution to selectively execute certain parts of a macro based on conditions like the value of a variable or user input.
-    - Retains user-defined global variables, functions, and procedures across sessions until deallocated or the keyboard powers off.
+    - |
+     Enhances QMK-powered keyboards with advanced text
+      generation and customization capabilities.
+    - |
+     Uses a "Compose" key to activate and deactivate the 
+     TextFlow interpreter for on-the-fly macro creation and
+     manipulation.
+    - |
+     Provides conditional execution to selectively execute
+      certain parts of a macro based on conditions like the
+      value of a variable or user input.
+    - |
+     Retains user-defined global variables, functions, and
+      procedures across sessions until deallocated or the
+      keyboard powers off.
   features:
-    - Flow control statements, such as "if-then", "while-do", and "for-next" loops
-    - Mathematical functions for arithmetic operations like addition, subtraction, multiplication, and division
-    - User-defined functions and procedures, enabling advanced macro creation and customization
-    - String manipulation functions for concatenation, substring extraction, and character replacement
-    - Date and time functions for retrieving and formatting dates and times
-    - Allows users to process data in real-time, such as filtering, sorting, or reformatting incoming data streams from sensors, logs, or other sources.
-    - Intuitive and efficient use of the "Compose" key for entering and exiting the TextFlow interpreter, making it easy for users to create and manage their custom macros.
+    - |
+      Flow control statements, such as "if-then", "while-do",
+       and "for-next" loops
+    - |
+      Mathematical functions for arithmetic operations like
+       addition, subtraction, multiplication, and division
+    - |
+      User-defined functions and procedures, enabling advanced
+       macro creation and customization
+    - |
+      String manipulation functions for concatenation,
+       substring extraction, and character replacement
+    - |
+      Date and time functions for retrieving and formatting
+       dates and times
+    - |
+      Allows users to process data in real-time, such as
+       filtering, sorting, or reformatting incoming data streams
+       from sensors, logs, or other sources.
+    - |
+      Intuitive and efficient use of the "Compose" key for
+       entering and exiting the TextFlow interpreter, making it
+       easy for users to create and manage their custom macros.
 
 - name: QMK TextFlow HID
-  description: A custom HID driver and library for TextFlow, designed to enhance the standard scripting language and interact with text on the host system, including shell command execution and output retrieval.
+  description: |
+    A custom HID driver and library for TextFlow, designed to
+     enhance the standard scripting language and interact with
+     text on the host system, including shell command execution
+     and output retrieval.
   details:
-    - Augments the TextFlow scripting language with additional functionality for increased versatility and power.
-    - Eliminates the need for a separate computer or software program to interact with host state.
+    - |
+     Augments the TextFlow scripting language with additional
+      functionality for increased versatility and power.
+    - |
+     Eliminates the need for a separate computer or software
+      program to interact with host state.
   features:
-    - Text search and filtering, provides grep-like functionality by allowing users to create macros that search for specific patterns in text and return matching lines or portions of text.
-    - Text replacement and substitution, offers sed-like capabilities by enabling users to create macros that perform search and replace operations based on defined patterns and replacement text.
-    - Text processing and field manipulation, mimics some of awk's features by allowing users to create macros that process text, split lines into fields, and perform calculations or manipulations based on specific criteria.
-    - Shell command execution and output retrieval, enables users to execute shell commands within their TextFlow scripts and retrieve the output directly in their keyboard for further use in their scripts.
-    - Direct keyboard execution, allows text processing operations to be executed directly on the keyboard, without the need for additional software or tools, streamlining the user experience and improving productivity.
-    - Cross-platform compatibility, as a custom HID driver, it has the potential to be compatible with a wide range of devices and operating systems, allowing users to take advantage of the text processing functionality on any device that supports HID communication.
-    - Customizable macros, offers users the ability to create and customize macros for text processing tasks, tailoring the functionality to suit their specific needs and requirements.
+    - |
+      Text search and filtering, provides grep-like
+       functionality by allowing users to create macros that
+       search for specific patterns in text and return matching
+       lines or portions of text.
+    - |
+      Text replacement and substitution, offers sed-like
+       capabilities by enabling users to create macros that
+       perform search and replace operations based on defined
+       patterns and replacement text.
+    - |
+      Text processing and field manipulation, mimics some of
+       awk's features by allowing users to create macros that
+       process text, split lines into fields, and perform
+       calculations or manipulations based on specific criteria.
+    - |
+      Shell command execution and output retrieval, enables
+       users to execute shell commands within their TextFlow
+       scripts and retrieve the output directly in their keyboard
+       for further use in their scripts.
+    - |
+      Direct keyboard execution, allows text processing operations
+       to be executed directly on the keyboard, without the need
+       for additional software or tools, streamlining the user
+       experience and improving productivity.
+    - |
+      Cross-platform compatibility, as a custom HID driver, it has
+       the potential to be compatible with a wide range of devices
+       and operating systems, allowing users to take advantage of
+       the text processing functionality on any device that 
+       supports HID communication.
+    - |
+      Customizable macros, offers users the ability to create and
+       customize macros for text processing tasks, tailoring the
+       functionality to suit their specific needs and requirements.
+
+- name: QMK TextFlow Persist
+  description: |
+    A library that simplifies storage of variables, functions, 
+     procedures, and macros in memory such as EEPROM and FRAM, and
+     other storage technologies supported by QMK.
+  details:
+    - |
+      Provides a convenient and efficient way to store user-defined
+       variables, functions, procedures, and macros in non-volatile
+       memory, allowing them to persist across power cycles and
+       system reboots.
+    - |
+      Supports a range of storage technologies, including EEPROM and
+       FRAM, and other storage options that are supported by QMK.
+    - |
+      Allows users to allocate, deallocate, and manage memory resources
+       for their custom variables, functions, procedures, and macros,
+       providing flexibility and control over their code.
+    - |
+      Designed to work seamlessly with the QMK TextFlow feature,
+       enabling users to define and store their custom macros,
+       functions, and procedures in memory, and use them in real-time
+       text processing tasks.
+  features:
+    - |
+      Non-volatile storage, ensuring that user-defined variables,
+       functions, procedures, and macros are retained even when the
+       keyboard is powered off or reset.
+    - |
+      Automatic memory management, simplifying the process of allocating
+       and deallocating memory resources for custom variables, functions,
+       procedures, and macros, and minimizing the risk of memory leaks
+       and errors.
+    - |
+      Compatibility with a range of storage technologies, including EEPROM
+       and FRAM, and other storage options supported by QMK, giving users
+       the flexibility to choose the most appropriate storage option for
+       their use case.
+    - |
+      Interoperability with the QMK TextFlow feature, enabling users to
+       define and store their custom macros, functions, and procedures in
+       memory, and use them in real-time text processing tasks, without
+       the need for additional storage management code.
+    - |
+      Easy-to-use interface, with simple functions and procedures for
+       allocating, deallocating, and accessing memory resources, allowing
+       users to focus on their code and text processing tasks, rather than
+       memory management.
 
 - name: Choiral
-  description: A mapping of English phonemes to musical chords designed to express the tone and rhythm of spoken language through music.
+  description: |
+    A mapping of English phonemes to musical chords designed to
+     express the tone and rhythm of spoken language through music.
   details:
-    - Optimizes similarity of phoneme progression in English sentences to common chord progressions in music.
+    - |
+     Optimizes similarity of phoneme progression in English
+      sentences to common chord progressions in music.
   features:
-    - Music composition inspiration, Generates unique chord progressions from spoken language.
-    - Enhances audiovisual experiences, Aligns music with dialogue or narration for immersive experiences in movies, video games, and virtual reality.
-    - Speech-to-music conversion, Transforms speeches, poetry readings, or other spoken performances into musical compositions.
-    - Music-to-speech conversion, Transforms musical compositions or performances into spoken language, including narrations, poetry, or other forms of verbal expression.
-    - Music therapy applications, Translates personal statements, memories, or goals into meaningful musical experiences.
-    - Text-based generative music, Combines with generative algorithms to create music based on user-generated or existing text.
-    - Human-computer interaction, Enables communication with computers through musical instruments.
-    - Alternative communication method, Supports individuals with speech impairments or those who find verbal communication challenging
-
+    - |
+      Music composition inspiration, Generates unique chord
+       progressions from spoken language.
+    - |
+      Enhances audiovisual experiences, Aligns music with dialogue
+       or narration for immersive experiences in movies, 
+       video games, and virtual reality.
+    - |
+      Speech-to-music conversion, Transforms speeches, 
+       poetry readings, or other spoken performances into musical
+       compositions.
+    - |
+      Music-to-speech conversion, Transforms musical compositions
+       or performances into spoken language, including narrations,
+       poetry, or other forms of verbal expression.
+    - |
+      Music therapy applications, Translates personal statements,
+       memories, or goals into meaningful musical experiences.
+    - |
+      Text-based generative music, Combines with generative
+       algorithms to create music based on user-generated or
+       existing text.
+    - |
+      Human-computer interaction, Enables communication with
+       computers through musical instruments.
+    - |
+      Alternative communication method, Supports individuals
+       with speech impairments or those who find verbal
+       communication challenging
 
 - name: RapidERD
-  description: A hotkey based, mouse integrated, ERD diagraming tool to support on the fly communication of structural concepts.
+  description: |
+    A hotkey based, mouse integrated, ERD diagraming tool to
+     support on the fly communication of structural concepts.
   details:
-    - Hotkey window
-    - Vim-style, normal mode hotkeys with different interpretations based on what the mouse cursor hovers over.
+    - |
+     Hotkey window
+    - |
+     Vim-style, normal mode hotkeys with different interpretations
+      based on what the mouse cursor hovers over.
   features:
-    - Hotkey-driven diagram creation, Quickly create and edit ERD diagrams using hotkeys, minimizing the need for mouse clicks.
-    - Mouse hover context sensitivity, Hotkeys have different functionalities based on the element the mouse cursor is hovering over, allowing for more efficient diagram editing.
-    - Customizable hotkey mappings, Users can customize hotkeys according to their preferences, increasing ease of use and productivity.
-    - Automatic layout adjustment, Diagram elements rearrange automatically to maintain a clean and organized layout during editing.
-    - Entity relationship templates, Predefined templates for common entity relationships, speeding up the diagram creation process.
-    - Collaboration support, Real-time collaboration with multiple users, enabling seamless communication of structural concepts., Export diagrams in various formats, such as PNG, JPEG, PDF, and SVG for easy sharing and documentation.
-    - Undo/Redo functionality, Efficiently undo or redo actions, allowing for quick corrections and adjustments during diagram creation.
+    - |
+      Hotkey-driven diagram creation, Quickly create and edit ERD
+       diagrams using hotkeys, minimizing the need for mouse 
+       clicks.
+    - |
+      Mouse hover context sensitivity, Hotkeys have different
+       functionalities based on the element the mouse cursor is
+       hovering over, allowing for more efficient diagram editing.
+    - |
+      Customizable hotkey mappings, Users can customize hotkeys
+       according to their preferences, increasing ease of use and
+       productivity.
+    - |
+      Automatic layout adjustment, Diagram elements rearrange
+       automatically to maintain a clean and organized layout 
+       during editing.
+    - |
+      Entity relationship templates, Predefined templates for
+       common entity relationships, speeding up the diagram
+       creation process.
+    - |
+      Collaboration support, Real-time collaboration with multiple
+       users, enabling seamless communication of structural
+       concepts., Export diagrams in various formats, such as PNG,
+       JPEG, PDF, and SVG for easy sharing and documentation.
+    - |
+      Undo/Redo functionality, Efficiently undo or redo actions,
+       allowing for quick corrections and adjustments during
+       diagram creation.

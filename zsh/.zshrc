@@ -29,21 +29,37 @@
 #                    : :                ''---..'''''----'.-'
 #                     '                        ''''''''''
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Environment check
+if [[ "$(uname -o)" == "Android" ]]; then
+    export TERMUX=true
+else
+    export TERMUX=false
+fi
+
+# Ascii Art (omitted)
+
+# Set PATH
+if [ "$TERMUX" = true ]; then
+    export PATH=$HOME/bin:/usr/local/bin:$PREFIX/bin:$PATH
+else
+    export PATH=$HOME/bin:/usr/local/bin:$PATH
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_CUSTOM=$HOME/.config/omz-custom
 
-#     update mode
+# Update mode
 zstyle ':omz:update' mode auto
-zstyle ':omz:update' frequency 14   
-# zstyle ':omz:update' mode disabled
-#     command correction
+zstyle ':omz:update' frequency 14
+
+# Command correction
 ENABLE_CORRECTION="true"
-#     command hyphen mode
+
+# Command hyphen mode
 HYPHEN_INSENSITIVE="true"
-#     waiting dots*temp (black, red, green, yellow, blue, magenta, cyan and white)
+
+# Waiting dots*temp (black, red, green, yellow, blue, magenta, cyan and white)
 COMPLETION_WAITING_DOTS="%F{white}===%f"
 HIST_STAMPS="dd.mm.yyyy"
 
@@ -55,7 +71,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ "$TERMUX" = false ]; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
 
 # Prompt
 PROMPT='%{$fg_bold[green]%}%D{%d/%m/%y} %D{%L:%M:%S}$(custom_git_prompt)%{$fg_bold[yellow]%}%B$(if [[ $PWD == $HOME ]]; then echo "\$HOME"; else echo "%c"; fi)%b%{$fg[white]%}/%{$fg_bold[red]%} $ %{$reset_color%}'
@@ -73,5 +91,4 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-
 

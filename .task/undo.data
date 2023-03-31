@@ -1,3 +1,6 @@
 time 1679612506
 new [description:"cover use cases of netrw command in nvim" entry:"1679612506" modified:"1679612506" status:"pending" uuid:"76507f0d-5b05-40eb-b284-aa4981fa859a"]
 ---
+time 1680025821
+new [description:"cover use cases of register view window command in nvim" entry:"1680025821" modified:"1680025821" status:"pending" uuid:"10fc52a4-3ebf-48b1-9391-be66448eb987"]
+---
