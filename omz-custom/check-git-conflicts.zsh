@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Variables
-MAIN_BRANCH="master"
+MAIN_BRANCH="main"
 CONFLICT_THRESHOLD=5
 
 # Function to get the current branch name
