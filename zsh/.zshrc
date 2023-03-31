@@ -36,8 +36,6 @@ else
     export TERMUX=false
 fi
 
-# Ascii Art (omitted)
-
 # Set PATH
 if [ "$TERMUX" = true ]; then
     export PATH=$HOME/bin:/usr/local/bin:$PREFIX/bin:$PATH
@@ -92,7 +90,8 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
-
 if [ "$TERMUX" = true ]; then
     clear; pwd; ls -1a;
 fi
+
+source $HOME/.config/zsh/check-git-conflicts.zsh
