@@ -1,105 +1,3 @@
-- name: Shephard
-  description: |
-    An IDE that runs as an image in Rancher that integrates Vim,
-     Taskwarrior, Git, and architectural diagrams to streamline
-     and enforce task-driven development.
-  details:
-    - |
-     Vim commands and mappings for seamless project navigation
-      and editing
-    - |
-     Vim commands and mappings for container and image
-      launching and management
-    - |
-     Taskwarrior configurations and task data for effective
-      task management
-    - |
-     Architectural diagram generation and documentation
-    - |
-     Git hooks to enforce task referencing and architectural
-      updates
-  features:
-    - |
-      Custom Vim commands and mappings, to quickly create and
-       switch between tasks, branches, and files and simplify
-        navigation between code and documentation
-    - |
-      Taskwarrior integration, to organize and track tasks
-       within the project and also link tasks to branches and
-       commit messages
-    - |
-      Architectural diagram and documentation, automatically
-       generate and update architectural diagrams based on code
-       changes and enforce consistency between code and
-       documentation
-    - |
-      Git hooks, enforce task references in branches and commit
-       messages, ensure architectural diagrams are updated with
-       code changes, deny pushes if documentation is not 
-       properly updated
-
-- name: PiHost Keyboard
-  description: |
-    A keyboard with an onboard Raspberry Pi that acts as a host
-     to a display and as an intermediary to the keyboard
-     connected via SPI.
-  details:
-    - |
-     The Raspberry Pi and second microprocessor serve to subvert
-      the single host protocol of USB by using SPI
-    - |
-     The Raspberry Pi runs a simple operating system to work as
-      a standalone system with the keyboard
-    - |
-     When the device is plugged in via USB to a host device,
-      the Raspberry Pi acts as an intermediary to keyboard input,
-      mapping the keycode and instructing the microprocessor how
-      to alert the host.
-  features:
-    - |
-      Enables on-the-fly mapping changes of input keyboard and
-       extensive output control of output keyboard.
-    - |
-      Customized Workstations, Users can create personalized
-       workstation experiences, with custom key mappings,
-       macros, and shortcuts tailored to their workflow and
-       specific software applications.
-    - |
-      Remote Device Management, The keyboard can be used to
-       control and manage remote devices, servers, or IoT devices
-       through the internet connection, allowing users to perform
-       tasks like remote monitoring, maintenance, and
-       troubleshooting.
-    - |
-      Mobile Workstation, The compact form factor and onboard
-       display make the PiHost Keyboard ideal for portable use.
-       Users can connect to remote machines or virtual desktops
-       and work from anywhere with an internet connection.
-    - GB-Sized Macros, Print onboard files as generated keyboard
-       output
-    - |
-      Gaming, Customizable key mappings, macros, and RGB lighting
-       make the keyboard suitable for gaming, providing users with
-       an enhanced, personalized gaming experience.
-    - |
-      Assistive Technology, The keyboard can be configured to meet
-       the needs of users with disabilities, with options for
-       customized key mappings, on-screen keyboards, or integration
-       with accessibility-focused peripherals.
-    - |
-      Home Automation, The PiHost Keyboard's IoT capabilities allow
-       users to control and monitor smart home devices, from lights
-       and thermostats to security systems and appliances, all 
-       through a single interface.
-    - |
-      Media Center Control, Users can use the PiHost Keyboard to
-       control media center software or streaming devices,
-       providing a convenient way to navigate and manage media
-       libraries.
-    - |
-      Expandable storage via microSD card slot for additional
-       customization options and backups.
-
 - name: QMK TextFlow
   description: |
     A QMK feature that introduces a powerful text generation
@@ -245,6 +143,108 @@
        allocating, deallocating, and accessing memory resources, allowing
        users to focus on their code and text processing tasks, rather than
        memory management.
+- name: Shephard
+  description: |
+    An IDE that runs as an image in Rancher that integrates Vim,
+     Taskwarrior, Git, and architectural diagrams to streamline
+     and enforce task-driven development.
+  details:
+    - |
+     Vim commands and mappings for seamless project navigation
+      and editing
+    - |
+     Vim commands and mappings for container and image
+      launching and management
+    - |
+     Taskwarrior configurations and task data for effective
+      task management
+    - |
+     Architectural diagram generation and documentation
+    - |
+     Git hooks to enforce task referencing and architectural
+      updates
+  features:
+    - |
+      Custom Vim commands and mappings, to quickly create and
+       switch between tasks, branches, and files and simplify
+        navigation between code and documentation
+    - |
+      Taskwarrior integration, to organize and track tasks
+       within the project and also link tasks to branches and
+       commit messages
+    - |
+      Architectural diagram and documentation, automatically
+       generate and update architectural diagrams based on code
+       changes and enforce consistency between code and
+       documentation
+    - |
+      Git hooks, enforce task references in branches and commit
+       messages, ensure architectural diagrams are updated with
+       code changes, deny pushes if documentation is not 
+       properly updated
+
+- name: PiHost Keyboard
+  description: |
+    A keyboard with an onboard Raspberry Pi that acts as a host
+     to a display and as an intermediary to the keyboard
+     connected via SPI.
+  details:
+    - |
+     The Raspberry Pi and second microprocessor serve to subvert
+      the single host protocol of USB by using SPI
+    - |
+     The Raspberry Pi runs a simple operating system to work as
+      a standalone system with the keyboard
+    - |
+     When the device is plugged in via USB to a host device,
+      the Raspberry Pi acts as an intermediary to keyboard input,
+      mapping the keycode and instructing the microprocessor how
+      to alert the host.
+  features:
+    - |
+      Enables on-the-fly mapping changes of input keyboard and
+       extensive output control of output keyboard.
+    - |
+      Customized Workstations, Users can create personalized
+       workstation experiences, with custom key mappings,
+       macros, and shortcuts tailored to their workflow and
+       specific software applications.
+    - |
+      Remote Device Management, The keyboard can be used to
+       control and manage remote devices, servers, or IoT devices
+       through the internet connection, allowing users to perform
+       tasks like remote monitoring, maintenance, and
+       troubleshooting.
+    - |
+      Mobile Workstation, The compact form factor and onboard
+       display make the PiHost Keyboard ideal for portable use.
+       Users can connect to remote machines or virtual desktops
+       and work from anywhere with an internet connection.
+    - GB-Sized Macros, Print onboard files as generated keyboard
+       output
+    - |
+      Gaming, Customizable key mappings, macros, and RGB lighting
+       make the keyboard suitable for gaming, providing users with
+       an enhanced, personalized gaming experience.
+    - |
+      Assistive Technology, The keyboard can be configured to meet
+       the needs of users with disabilities, with options for
+       customized key mappings, on-screen keyboards, or integration
+       with accessibility-focused peripherals.
+    - |
+      Home Automation, The PiHost Keyboard's IoT capabilities allow
+       users to control and monitor smart home devices, from lights
+       and thermostats to security systems and appliances, all 
+       through a single interface.
+    - |
+      Media Center Control, Users can use the PiHost Keyboard to
+       control media center software or streaming devices,
+       providing a convenient way to navigate and manage media
+       libraries.
+    - |
+      Expandable storage via microSD card slot for additional
+       customization options and backups.
+
 
 - name: Choiral
   description: |
