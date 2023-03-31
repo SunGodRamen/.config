@@ -2,7 +2,7 @@
 
 # Variables
 CONFIG_REPO_PATH="$HOME/.config"
-MAIN_BRANCH="main"
+ALT_BRANCH="config-android"
 CONFLICT_THRESHOLD=5
 
 # Function to check internet connectivity
@@ -31,7 +31,7 @@ if check_internet; then
 
   # Temporary merge to detect conflicts
   git -C "$CONFIG_REPO_PATH" checkout -b temp-merge-branch "${CURRENT_BRANCH}" &>/dev/null
-  git -C "$CONFIG_REPO_PATH" merge "${MAIN_BRANCH}" --no-commit --no-ff &>/dev/null
+  git -C "$CONFIG_REPO_PATH" merge "${ALT_BRANCH}" --no-commit --no-ff &>/dev/null
 
   # Count the number of conflicts
   CONFLICT_COUNT=$(git -C "$CONFIG_REPO_PATH" ls-files -u | wc -l)
@@ -43,6 +43,6 @@ if check_internet; then
 
   # Display a warning message if the conflict count exceeds the threshold
   if [ "${CONFLICT_COUNT}" -gt "${CONFLICT_THRESHOLD}" ]; then
-    echo "Warning: There are ${CONFLICT_COUNT} potential merge conflicts between ${CURRENT_BRANCH} and ${MAIN_BRANCH} in the .config repository. Consider merging and resolving conflicts soon."
+    echo "Warning: There are ${CONFLICT_COUNT} potential merge conflicts between ${CURRENT_BRANCH} and ${ALT_BRANCH} in the .config repository. Consider merging and resolving conflicts soon."
   fi
 fi
