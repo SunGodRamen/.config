@@ -92,3 +92,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+
+if [ "$TERMUX" = true ]; then
+    clear; pwd; ls -1a;
+fi
