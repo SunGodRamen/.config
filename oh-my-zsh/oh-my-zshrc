@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$CONFIG/oh-my-zsh/installation"
 
+# Path to custom directory
+ZSH_CUSTOM="$CONFIG/oh-my-zsh/custom"
+
 # Set name of the theme to load
 ZSH_THEME="robbyrussell"
 

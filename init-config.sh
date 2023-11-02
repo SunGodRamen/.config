@@ -1,6 +1,6 @@
 export CONFIG=$HOME/.config
 
-# Neovim configuration switch
+# Neovim
 ENABLE_NEOVIM=true
 if [ "$ENABLE_NEOVIM" = true ]; then
     export EDITOR='nvim'
@@ -27,6 +27,6 @@ fi
 # SDKMAN
 ENABLE_SDKMAN=true
 if [ "$ENABLE_SDKMAN" = true ]; then
-    export SDKMAN_DIR="$CONFIG/sdkman"
+    export SDKMAN_DIR="$HOME/.sdkman"
     [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 fi
