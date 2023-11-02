@@ -4,8 +4,8 @@ export ZSH="$CONFIG/oh-my-zsh/installation"
 # Path to custom directory
 ZSH_CUSTOM="$CONFIG/oh-my-zsh/custom"
 
-# Set name of the theme to load
-ZSH_THEME="robbyrussell"
+# Prompt
+source $CONFIG/oh-my-zsh/prompt
 
 # auto-update behavior
 # just remind me to update when it's time
@@ -21,6 +21,6 @@ COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 HIST_STAMPS="dd.mm.yyyy"
 
 # plugins
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
