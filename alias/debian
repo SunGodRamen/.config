@@ -1,0 +1,2 @@
+# Update and Upgrade for Debian/Ubuntu systems
+alias update='sudo apt update && sudo apt upgrade'

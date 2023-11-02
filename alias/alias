@@ -1,0 +1,54 @@
+# Common Aliases
+
+# General shortcuts
+alias ll='ls -la'       # Display a detailed list including hidden files
+alias la='ls -A'       # Display all entries except for . and ..
+alias l='ls -1a'       # Display in list format
+
+alias c='clear'        # Clear the terminal screen
+alias h='history'      # Display command history
+
+# Directory navigation
+alias ..='cd ..'       # Go up one directory level
+alias ...='cd ../..'   # Go up two directory levels
+alias ....='cd ../../..' # Go up three directory levels
+alias ~="cd ~"         # Navigate to home directory
+
+# File operations
+alias rm='rm -i'       # Make rm interactive to prevent accidental deletions
+alias cp='cp -i'       # Make cp interactive to prevent accidental overwrites
+alias mv='mv -i'       # Make mv interactive to prevent accidental overwrites
+
+# Disk usage
+alias dfh='df -h'      # Show disk space usage in human-readable format
+alias duh='du -sh'     # Show estimated space usage of a directory in human-readable format
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Network
+alias myip='curl http://ipecho.net/plain; echo'  # Get public IP address
+
+# Shortcuts for different editing and reading commands
+alias nano='nano -l'   # Enable line numbers in nano
+
+# Miscellaneous
+alias pls='sudo $(history -p !!)' # Re-run last command with sudo
+alias untar='tar -xzvf'  # Simplify tar extraction
+
+# Debian/ubuntu
+if grep -qE '^ID=(debian|ubuntu)' /etc/os-release; then
+    source $CONFIG/alias/debian
+fi
