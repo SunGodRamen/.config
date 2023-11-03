@@ -1,5 +1,5 @@
 __pycache__/
 *.pyc
 
-.config/nvim/vim-plug/autoload/
+nvim/vim-plug/autoload
 coc/
