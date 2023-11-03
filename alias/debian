@@ -1,2 +1,29 @@
 # Update and Upgrade for Debian/Ubuntu systems
 alias update='sudo apt update && sudo apt upgrade'
+
+# Search for a package in the repositories
+alias search='apt-cache search'
+
+# Install a package
+alias install='sudo apt install'
+
+# Remove a package
+alias remove='sudo apt remove'
+
+# Auto-remove unneeded packages (orphans)
+alias autoremove='sudo apt autoremove'
+
+# List installed packages
+alias list-installed='dpkg -l'
+
+# Display information about a package
+alias pkg-info='apt-cache show'
+
+# Clean up old downloaded archive files
+alias clean='sudo apt clean'
+
+# Check for broken dependencies
+alias check-deps='sudo apt check'
+
+# Display a log of recently installed packages
+alias recent='cat /var/log/dpkg.log | grep "\ install\ "'

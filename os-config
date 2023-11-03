@@ -1,32 +1,37 @@
-
 case "$OSTYPE" in
-    # Match Windows (typically when using Git Bash)
     msys|cygwin)
-        echo "GIT BASH?"
+        # Windows (typically when using Git Bash or Cygwin)
+        export CURRENT_OS="GIT_BASH"
         ;;
 
     linux-gnu*)
-        # We're on a Unix-like system
+        # Unix-like system
         if [ -f /etc/os-release ]; then
             case "$(grep '^ID=' /etc/os-release)" in
                 'ID=debian'|'ID=ubuntu')
-                    source $CONFIG/alias/debian
+                    export CURRENT_OS="DEBIAN_BASED"
                     ;;
 
                 *)
-                    # This branch is for other Linux distributions if needed
-                    echo linux other
+                    # Other Linux distributions
+                    export CURRENT_OS="LINUX_OTHER"
                     ;;
             esac
         fi
         ;;
 
     android)
-        echo "TERMUX?"
+        # Android, likely using Termux
+        export CURRENT_OS="TERMUX"
+        ;;
+
+    darwin*)
+        # MacOS
+        export CURRENT_OS="MACOS"
         ;;
 
     *)
-        # This branch is for other OS types if needed
-        echo "OTHER"
+        # Other OS types
+        export CURRENT_OS="UNKNOWN"
         ;;
 esac
