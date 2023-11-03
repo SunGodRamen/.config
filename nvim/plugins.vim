@@ -82,7 +82,6 @@ if exists('g:enable_ale') && g:enable_ale
     let g:ale_lint_on_text_changed = 'always'
 endif
 
-
 " ============================
 " NERDTree Configurations
 " ============================
