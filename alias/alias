@@ -47,13 +47,3 @@ alias nano='nano -l'   # Enable line numbers in nano
 # Miscellaneous
 alias pls='sudo $(history -p !!)' # Re-run last command with sudo
 alias untar='tar -xzvf'  # Simplify tar extraction
-
-# Debian/ubuntu
-# Check if we're on Windows with Git Bash
-if [ -z "$WINDIR" ]; then
-    # We're on a Unix-like system
-    if [ -f /etc/os-release ] && grep -qE '^ID=(debian|ubuntu)' /etc/os-release; then
-        source $CONFIG/alias/debian
-    fi
-fi
-
