@@ -19,9 +19,6 @@ nnoremap <Leader>s :w<CR>
 " Easily start a search and replace for the word under cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
 
-" Toggle the NERDTree plugin (assuming you have it installed)
-nnoremap <Leader>t :NERDTreeToggle<CR>
-
 " Open a vertical split
 nnoremap <Leader>v :vsplit<CR>
 

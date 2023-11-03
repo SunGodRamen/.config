@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+
+.config/nvim/vim-plug/autoload/
