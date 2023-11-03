@@ -4,3 +4,6 @@
 [submodule "oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "oh-my-zsh/custom/plugins/thefuck"]
+	path = oh-my-zsh/custom/plugins/thefuck
+	url = https://github.com/nvbn/thefuck.git
