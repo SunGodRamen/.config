@@ -20,7 +20,20 @@ COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # command execution time stamp shown in the history command output
 HIST_STAMPS="dd.mm.yyyy"
 
-# plugins
-plugins=(git zsh-autosuggestions thefuck)
+plugins=()
+export ENABLE_GIT_PLUGIN=true
+if [ "$ENABLE_GIT_PLUGIN" = true ]; then
+    plugins+=(git)
+fi
+
+export ENABLE_ZSH_AUTOSUGGESTIONS_PLUGIN=true
+if [ "$ENABLE_ZSH_AUTOSUGGESTIONS_PLUGIN" = true ]; then
+    plugins+=(zsh-autosuggestions)
+fi
+
+export ENABLE_THEFUCK_PLUGIN=false
+if [ "$ENABLE_THEFUCK_PLUGIN" = true ]; then
+    plugins+=(thefuck)
+fi
 
 source $ZSH/oh-my-zsh.sh
