@@ -1,0 +1,32 @@
+
+case "$OSTYPE" in
+    # Match Windows (typically when using Git Bash)
+    msys|cygwin)
+        echo "GIT BASH?"
+        ;;
+
+    linux-gnu*)
+        # We're on a Unix-like system
+        if [ -f /etc/os-release ]; then
+            case "$(grep '^ID=' /etc/os-release)" in
+                'ID=debian'|'ID=ubuntu')
+                    source $CONFIG/alias/debian
+                    ;;
+
+                *)
+                    # This branch is for other Linux distributions if needed
+                    echo linux other
+                    ;;
+            esac
+        fi
+        ;;
+
+    android)
+        echo "TERMUX?"
+        ;;
+
+    *)
+        # This branch is for other OS types if needed
+        echo "OTHER"
+        ;;
+esac
