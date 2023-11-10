@@ -1,10 +1,10 @@
 export CONFIG=$HOME/.config
 
 # configurable apps
-export ENABLE_NEOVIM=true
 export ENABLE_BASH=false
 export ENABLE_ZSH=true
 export ENABLE_OH_MY_ZSH=true
+export ENABLE_NEOVIM=true
 export ENABLE_SDKMAN=true
 
 # set operating system : CURRENT_OS
