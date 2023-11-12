@@ -32,7 +32,7 @@ if [ "$ENABLE_ZSH_AUTOSUGGESTIONS_PLUGIN" = true ]; then
     plugins+=(zsh-autosuggestions)
 fi
 
-export ENABLE_THEFUCK_PLUGIN=true
+export ENABLE_THEFUCK_PLUGIN=false
 if [ "$ENABLE_THEFUCK_PLUGIN" = true ]; then
     plugins+=(thefuck)
     ENABLE_CORRECTION="false"
