@@ -3,7 +3,7 @@
 # General shortcuts
 alias ll='ls -la'       # Display a detailed list including hidden files
 alias la='ls -A'       # Display all entries except for . and ..
-alias l='ls -1a'       # Display in list format
+alias l='ls -1'       # Display in list format
 
 alias c='clear'        # Clear the terminal screen
 alias h='history'      # Display command history

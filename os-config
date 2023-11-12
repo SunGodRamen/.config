@@ -1,7 +1,7 @@
 case "$OSTYPE" in
     msys|cygwin)
         # Windows (typically when using Git Bash or Cygwin)
-        export CURRENT_OS="GIT_BASH"
+        export CURRENT_OS="WINDOWS"
         ;;
 
     linux-gnu*)
@@ -20,7 +20,7 @@ case "$OSTYPE" in
         fi
         ;;
 
-    android)
+    linux-android)
         # Android, likely using Termux
         export CURRENT_OS="TERMUX"
         ;;

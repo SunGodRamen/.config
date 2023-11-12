@@ -1,0 +1,6 @@
+export ENABLE_BASH=true
+export ENABLE_ZSH=false
+export ENABLE_OH_MY_ZSH=false
+export ENABLE_NEOVIM=true
+export ENABLE_SDKMAN=true
+

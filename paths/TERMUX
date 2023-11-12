@@ -1,0 +1,5 @@
+export COM_TERMUX=/data/data/com.termux
+
+export MOTD=$COM_TERMUX/files/usr/etc/motd
+
+
