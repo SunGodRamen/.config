@@ -7,9 +7,10 @@ case "$OSTYPE" in
     linux-gnu*)
         # Unix-like system
         if [ -f /etc/os-release ]; then
-            case "$(grep '^ID=' /etc/os-release)" in
-                'ID=debian'|'ID=ubuntu')
-                    export CURRENT_OS="DEBIAN_BASED"
+            . /etc/os-release  # Source the os-release file
+            case $ID in
+                ubuntu)
+                    export CURRENT_OS="UBUNTU"
                     ;;
 
                 *)
