@@ -27,3 +27,9 @@ if [ "$ENABLE_SDKMAN" = true ]; then
     [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
     source $CONFIG/alias/sdkman
 fi
+
+# Cassandra DB
+if [ "$ENABLE_CASSANDRA" = true ]; then
+    export CASSANDRA_HOME=/opt/cassandra
+    export PATH=$PATH:$CASSANDRA_HOME/bin
+fi

@@ -3,4 +3,4 @@ export ENABLE_ZSH=true
 export ENABLE_OH_MY_ZSH=true
 export ENABLE_NEOVIM=true
 export ENABLE_SDKMAN=true
-
+export ENABLE_CASSANDRA=true
