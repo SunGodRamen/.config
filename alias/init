@@ -1,0 +1,5 @@
+# OS Specific aliases
+source $CONFIG/alias/os-config/$CURRENT_OS
+
+# Common Aliases
+source $CONFIG/alias/common
