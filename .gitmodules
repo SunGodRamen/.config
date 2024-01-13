@@ -4,6 +4,6 @@
 [submodule "apps/oh-my-zsh/installation"]
 	path = apps/oh-my-zsh/installation
 	url = git@github.com:ohmyzsh/ohmyzsh.git
-[submodule "apps/oh-my-zsh/custom/plugins/omz-autocomplete"]
-	path = apps/oh-my-zsh/custom/plugins/omz-autocomplete
-	url = git@github.com:marlonrichert/zsh-autocomplete.git
+[submodule "apps/oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = apps/oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
