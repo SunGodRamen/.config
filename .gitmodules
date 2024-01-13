@@ -1,9 +1,9 @@
-[submodule "oh-my-zsh/installation"]
-	path = oh-my-zsh/installation
-	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule "oh-my-zsh/custom/plugins/zsh-autosuggestions"]
-	path = oh-my-zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "nvim/vim-plug"]
-	path = nvim/vim-plug
-	url = https://github.com/junegunn/vim-plug
+[submodule "apps/oh-my-zsh/installation"]
+	path = apps/oh-my-zsh/installation
+	url = git@github.com:ohmyzsh/ohmyzsh.git
+[submodule "apps/oh-my-zsh/custom/plugins/omz-autocomplete"]
+	path = apps/oh-my-zsh/custom/plugins/omz-autocomplete
+	url = git@github.com:marlonrichert/zsh-autocomplete.git
+[submodule "apps/nvim/vim-plug"]
+	path = apps/nvim/vim-plug
+	url = git@github.com:junegunn/vim-plug.git
