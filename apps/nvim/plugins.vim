@@ -12,7 +12,7 @@ let g:enable_rust = 1
 
 " Initialize VimPlug
 execute "source " . g:config_dir . "/vim-plug/plug.vim"
-call plug#begin('~/.config/nvim/vim-plug/autoload')
+call plug#begin(g:config_dir . '/vim-plug/autoload')
 
 " Conditional plugin loading
 if g:enable_nerdtree
