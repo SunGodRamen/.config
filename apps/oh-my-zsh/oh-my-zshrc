@@ -1,11 +1,13 @@
+OMZ_DIRECTORY="$CONFIG/apps/oh-my-zsh"
+
 # Path to your oh-my-zsh installation.
-export ZSH="$CONFIG/oh-my-zsh/installation"
+export ZSH="$OMZ_DIRECTORY/installation"
 
 # Path to custom directory
-ZSH_CUSTOM="$CONFIG/oh-my-zsh/custom"
+ZSH_CUSTOM="$OMZ_DIRECTORY/custom"
 
 # Prompt
-source $CONFIG/oh-my-zsh/prompt
+source $OMZ_DIRECTORY/prompt
 
 # auto-update behavior
 # just remind me to update when it's time

@@ -1,7 +1,9 @@
+#!/usr/bin/env sh
+
 case "$OSTYPE" in
     msys|cygwin)
         # Windows (typically when using Git Bash or Cygwin)
-        export CURRENT_OS="WINDOWS"
+        echo "WINDOWS"
         ;;
 
     linux-gnu*)
@@ -10,12 +12,12 @@ case "$OSTYPE" in
             . /etc/os-release  # Source the os-release file
             case $ID in
                 ubuntu)
-                    export CURRENT_OS="UBUNTU"
+                    echo "UBUNTU"
                     ;;
 
                 *)
                     # Other Linux distributions
-                    export CURRENT_OS="LINUX_OTHER"
+                    echo "LINUX_OTHER"
                     ;;
             esac
         fi
@@ -23,16 +25,16 @@ case "$OSTYPE" in
 
     linux-android)
         # Android, likely using Termux
-        export CURRENT_OS="TERMUX"
+        echo "ANDROID"
         ;;
 
     darwin*)
         # MacOS
-        export CURRENT_OS="MACOS"
+        echo "DARWIN"
         ;;
 
     *)
         # Other OS types
-        export CURRENT_OS="UNKNOWN"
+        echo "UNKNOWN"
         ;;
 esac

@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+# Check and install Rust components
+missing_components=0
+
+# Check if Rust is installed
+if ! command -v rustc &> /dev/null; then
+  echo "Rust is not installed. Installing Rust..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  source $HOME/.cargo/env
+  missing_components=1
+fi
+
+# Check and install RLS
+if ! rustup component list | grep -q 'rls'; then
+  echo "RLS is not installed. Installing RLS..."
+  rustup component add rls
+  missing_components=1
+fi
+
+# Check and install rust-analysis
+if ! rustup component list | grep -q 'rust-analysis'; then
+  echo "rust-analysis is not installed. Installing rust-analysis..."
+  rustup component add rust-analysis
+  missing_components=1
+fi
+
+# Check and install rust-src
+if ! rustup component list | grep -q 'rust-src'; then
+  echo "rust-src is not installed. Installing rust-src..."
+  rustup component add rust-src
+  missing_components=1
+fi
+
+# Print completion message
+if [ $missing_components -eq 1 ]; then
+  echo "Rust and the required components have been installed."
+fi
