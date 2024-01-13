@@ -1,0 +1,40 @@
+#!/usr/bin/env sh
+
+case "$OSTYPE" in
+    msys|cygwin)
+        # Windows (typically when using Git Bash or Cygwin)
+        echo "WINDOWS"
+        ;;
+
+    linux-gnu*)
+        # Unix-like system
+        if [ -f /etc/os-release ]; then
+            . /etc/os-release  # Source the os-release file
+            case $ID in
+                ubuntu)
+                    echo "UBUNTU"
+                    ;;
+
+                *)
+                    # Other Linux distributions
+                    echo "LINUX_OTHER"
+                    ;;
+            esac
+        fi
+        ;;
+
+    linux-android)
+        # Android, likely using Termux
+        echo "ANDROID"
+        ;;
+
+    darwin*)
+        # MacOS
+        echo "DARWIN"
+        ;;
+
+    *)
+        # Other OS types
+        echo "UNKNOWN"
+        ;;
+esac

@@ -1,0 +1,17 @@
+# If not running interactively, don't do anything
+if [[ $- != *i* ]]; then
+    return
+fi
+
+# don't put duplicate lines or lines starting with space in the history.
+setopt HIST_IGNORE_DUPS   # ignore duplicate entries
+setopt HIST_IGNORE_SPACE  # ignore commands starting with a space
+
+HISTSIZE=1000
+SAVEHIST=2000
+HISTFILE=~/.zsh_history
+setopt APPEND_HISTORY     # append history to the history file
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+setopt EXTENDED_GLOB

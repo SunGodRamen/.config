@@ -1,3 +1,0 @@
-export PATHS=~/.config/paths/$CURRENT_OS
-
-source $PATHS

@@ -1,0 +1,45 @@
+source $CONFIG/apps/os-config/$CURRENT_OS
+
+# bash
+if [ "$ENABLE_BASH" = true ]; then
+    source $CONFIG/apps/bash/bashrc
+fi
+
+# zsh
+if [ "$ENABLE_ZSH" = true ]; then
+    source $CONFIG/apps/zsh/zshrc
+fi
+
+# oh-my-zsh
+if [ "$ENABLE_OH_MY_ZSH" = true ]; then
+    source $CONFIG/apps/oh-my-zsh/oh-my-zshrc
+fi
+
+# Neovim
+if [ "$ENABLE_NEOVIM" = true ]; then
+    export VIMINIT="let \$MYVIMRC='${HOME}/.config/apps/nvim/init.vim' | source \$MYVIMRC"
+    export EDITOR='nvim'
+    alias v='nvim'
+fi
+
+# SDKMAN
+if [ "$ENABLE_SDKMAN" = true ]; then
+    if [ -d "$HOME/.sdkman" ]; then
+        export SDKMAN_DIR="$HOME/.sdkman"
+        [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+        source $CONFIG/apps/sdkman
+    fi
+fi
+
+# Cassandra DB
+if [ "$ENABLE_CASSANDRA" = true ]; then
+    if [ -d "/opt/cassandra" ]; then
+        export CASSANDRA_HOME=/opt/cassandra
+        export PATH=$PATH:$CASSANDRA_HOME/bin
+    fi
+fi
+
+# Rust
+if [ "$ENABLE_RUST" = true ]; then
+    source $CONFIG/apps/rust
+fi
