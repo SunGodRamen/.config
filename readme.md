@@ -26,17 +26,17 @@ Copy the content of your existing dotfiles to the new locations in the config to
 
 # Structure
 The .config directory is organized into several subdirectories, each serving a specific purpose:
-.config
-├── alias:
-│   Contains alias configurations.
-├── apps:
-│   Contains application-specific settings.
-├── bin:
-│   Contains scripts and programs.
-├── paths:
-│   Contains path aliases.
-└── init:
-    A script to export the CONFIG environment variable.
+    .config
+    ├── alias:
+    │   Contains alias configurations.
+    ├── apps:
+    │   Contains application-specific settings.
+    ├── bin:
+    │   Contains scripts and programs.
+    ├── paths:
+    │   Contains path aliases.
+    └── init:
+        A script to export the CONFIG environment variable.
 
 ## Operating Systems
 The os-type script determines the operating system the config is running on and currently recognizes the following systems:
