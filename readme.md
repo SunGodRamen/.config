@@ -37,7 +37,7 @@ The .config directory is organized into several subdirectories, each serving a s
     ├── paths:
     │   Contains path aliases.
     └── init:
-        A script to export the CONFIG environment variable.
+        A script to source the config scripts.
 ```
 
 ## Operating Systems
