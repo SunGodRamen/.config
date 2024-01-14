@@ -18,7 +18,7 @@ git submodule update --init --recursive
 ### Initialize Configurations:
 Add the following line to your shell's initialization file (.bashrc, .zshrc, etc.):
 ```
-source `/.config/init-config
+source ~/.config/init
 ```
 
 ### Update new config content
