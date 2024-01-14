@@ -1,5 +1,3 @@
-
-
 " UI Elements:
 highlight Normal guifg=#FFFFFF guibg=#000000
 highlight Cursor guifg=#FFFFFF guibg=#000000
