@@ -16,5 +16,3 @@ setopt APPEND_HISTORY     # append history to the history file
 # match all files and zero or more directories and subdirectories.
 setopt EXTENDED_GLOB
 
-# Source aliases
-source $CONFIG/alias/alias

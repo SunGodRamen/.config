@@ -1,0 +1,5 @@
+# clipboard copy - copy command output to clipboard
+cbc() {
+  "$@" | termux-clipboard-set
+}
+
