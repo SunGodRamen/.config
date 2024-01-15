@@ -20,17 +20,20 @@ set autoindent      " Auto indent new lines
 set encoding=utf-8
 
 " Visual settings
-set background=dark " Set background to dark (can also be "light" depending on your color scheme)
+set background=dark " Set background to dark (can also be light depending on your color scheme)
 
 " Split windows
 set splitbelow      " Horizontal splits will be below the current window
 set splitright      " Vertical splits will be to the right of the current window
 
 " Enable line wrapping
-set wrap
+set nowrap
 
 " Set the color scheme (you might need to install one or use a built-in one)
-" colorscheme desert
+if (has("termguicolors"))
+    set termguicolors
+endif
+colorscheme monokai-charcoal
 
 " Highlight matching parenthesis
 set showmatch

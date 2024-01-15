@@ -1,5 +1,6 @@
 " init.vim
 let g:config_dir = expand("~/.config/apps/nvim")
+set runtimepath^=~/.config/apps/nvim
 
 " Plugin settings
 execute "source " . g:config_dir . "/plugins.vim"
