@@ -1,2 +1,4 @@
+$CONFIG/apps/rust/install-rust
+
 export CARGO_HOME="$HOME/.cargo"
 export RUSTUP_HOME="$HOME/.rustup"

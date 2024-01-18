@@ -1,10 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Check and install Rust components
 missing_components=0
 
 # Check if Rust is installed
-if ! command -v rustc &> /dev/null; then
+if ! command -v "rustc" >/dev/null 2>&1; then
   echo "Rust is not installed. Installing Rust..."
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   source $HOME/.cargo/env
