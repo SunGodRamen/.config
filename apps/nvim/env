@@ -1,0 +1,11 @@
+# Set the environment variables for the current os
+case "$CURRENT_OS" in
+    ANDROID)
+        VIM_KEYMAP="Qwerty"
+        ;;
+    WINDOWS)
+        VIM_KEYMAP="Dvorak"
+        ;;
+    UBUNTU)
+        VIM_KEYMAP="Dvorak"
+        ;;
