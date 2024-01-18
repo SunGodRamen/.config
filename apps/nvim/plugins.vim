@@ -1,6 +1,6 @@
 " Define whether to enable specific plugins
 let g:enable_nerdtree = 1
-let g:enable_coc = 1
+let g:enable_coc = 0
 let g:enable_airline = 1
 let g:enable_ale = 1
 let g:enable_surround = 1
@@ -11,8 +11,8 @@ let g:enable_deoplete = 1
 let g:enable_rust = 1
 
 " Initialize VimPlug
-execute "source " . g:config_dir . "/vim-plug/plug.vim"
-call plug#begin(g:config_dir . '/vim-plug/autoload')
+execute "source " . g:vim_dir . "/vim-plug/plug.vim"
+call plug#begin(g:vim_dir . '/vim-plug/autoload')
 
 " Conditional plugin loading
 if g:enable_nerdtree
