@@ -4,7 +4,7 @@ function confirm() {
     message=$1
     # Prompt the user
     echo -n "$message (y/n)"
-    read -n 1 -r response
+    read -r response
     echo
     while true; do
 
