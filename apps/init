@@ -1,5 +1,10 @@
 source $CONFIG/apps/os-config/$CURRENT_OS
 
+# initialize submodules
+if ! source "$CONFIG/script/test-submodules" "$CONFIG"; then
+    run_in_dir "$CONFIG" git submodule update --init --recursive
+fi
+
 # bash
 if [ "$ENABLE_BASH" = true ]; then
     source $CONFIG/apps/bash/bashrc
@@ -40,5 +45,10 @@ fi
 
 # Lynx
 if [ "$ENABLE_LYNX" = true ]; then
-    
+    source $CONFIG/apps/lynx/env
+fi
+
+# Notify send
+if [ "$ENABLE_NOTIFYSEND" = true ]; then
+    source $CONFIG/apps/wsl-notify-send/env
 fi

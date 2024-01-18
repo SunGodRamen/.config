@@ -1,5 +1,17 @@
 # set sdkman directory
-export SDKMAN_DIR="$CONFIG/apps/sdkman/dir"
+export SDKMAN_DIR="$CONFIG/apps/sdkman/installation/target/release"
+
+if [ ! -d "$SDKMAN_DIR" ]; then
+    if ! commands_exist sed curl zip unzip; then
+        echo "SDKMAN not installed."
+        if confirm "Install dependencies: (sed curl zip unzip), and install?"; then
+            sudo apt install sed curl zip unzip
+        fi
+    fi
+    if commands_exist sed curl zip unzip; then
+        curl -s https://get.sdkman.io | bash > /dev/null 2>&1
+    fi
+fi
 
 if [ -d "$SDKMAN_DIR" ]; then
     # source init script
