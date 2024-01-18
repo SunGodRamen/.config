@@ -4,6 +4,8 @@ let g:enable_coc = 0
 let g:enable_airline = 1
 let g:enable_ale = 1
 let g:enable_surround = 1
+let g:tree_sitter = 1
+let g:enable_rainbow_parens = 1
 let g:enable_commentary = 1
 let g:enable_easymotion = 1
 let g:enable_gitgutter = 1
@@ -33,6 +35,15 @@ endif
 
 if g:enable_surround
     Plug 'tpope/vim-surround'
+endif
+
+if g:tree_sitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+endif
+
+if g:enable_rainbow_parens
+    Plug 'HiPhish/rainbow-delimiters.nvim'
 endif
 
 if g:enable_commentary
