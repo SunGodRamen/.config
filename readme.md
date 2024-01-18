@@ -32,12 +32,14 @@ The .config directory is organized into several subdirectories, each serving a s
     │   Contains alias configurations.
     ├── apps:
     │   Contains application-specific settings.
-    ├── bin:
-    │   Contains scripts and programs.
     ├── paths:
     │   Contains path aliases.
+    ├── lib:
+    │   Contains shell functions to source.
+    ├── script:
+    │   Contains shell scripts to run.
     └── init:
-        A script to source the config scripts.
+        Entry point to the configuration.
 ```
 
 ## Operating Systems

@@ -1,8 +1,10 @@
 export CONFIG=$HOME/.config
 
+# source all functions in lib directory
+$CONFIG/script/source-all-in-dir $CONFIG/lib
+
 # set operating system : CURRENT_OS
-CURRENT_OS=$(source $CONFIG/bin/os-type)
-export CURRENT_OS
+export CURRENT_OS=$($CONFIG/script/os-type)
 
 # initializations
 #  path aliases
