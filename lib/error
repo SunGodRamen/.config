@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+function display_error() {
+    error_message=$1
+    echo "$error_message"
+    echo "Press any key to exit..."
+    read -n 1 -s -r
+    exit 1
+}

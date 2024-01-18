@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+# Save the current directory and ensure a return to it on script exit
+current_dir=$(pwd)
+
+ # Determine the project root directory
+if [ -n "$1" ]; then
+    project_root=$1
+else
+    project_root=$(git rev-parse --show-toplevel 2> /dev/null)
+    if [ $? -ne 0 ]; then
+        echo "Current directory is not part of a Git repository."
+        echo "Press any key to exit..."
+        read -n 1 -s -r
+        exit 1
+    fi
+fi
+
+# Navigate to the project root
+cd "$project_root" || { 
+    echo "Invalid directory: $project_root"
+    echo "Press any key to exit..."
+    read -n 1 -s -r
+    exit 1
+}
+
+# Check if .gitmodules exists
+if [ ! -f .gitmodules ]; then
+    # No submodules in project
+    cd "$current_dir"
+    return 0
+fi
+
+# List all submodules defined in .gitmodules
+while IFS= read -r line; do
+    defined_submodules+=("$line")
+done < <(git config --file .gitmodules --get-regexp path | awk '{ print $2 }')
+
+# List all initialized submodules
+while IFS= read -r line; do
+    initialized_submodules+=("$line")
+done < <(git submodule status | awk '{ print $2 }')
+
+# Check each defined submodule to see if it's initialized
+for submodule in "${defined_submodules[@]}"; do
+    if [[ ! " ${initialized_submodules[*]} " =~ " ${submodule} " ]]; then
+        # Submodule needs to be initialized
+        cd "$current_dir"
+        return 1
+    fi
+done
+
+# All submodules are initialized
+cd "$current_dir"
+return 0

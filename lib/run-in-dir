@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+function run_in_dir() {
+    local target_directory=$1
+    shift
+    local command_to_run=("$@")
+
+    local original_directory
+    original_directory=$(pwd)
+
+    cd "$target_directory" || {
+        echo "Failed to change directory to $target_directory"
+        return 1
+    }
+
+    "${command_to_run[@]}"
+
+    cd "$original_directory" || {
+        echo "Failed to return to original directory"
+        return 1
+    }
+}

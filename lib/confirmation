@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+function confirm() {
+    message=$1
+    # Prompt the user
+    echo -n "$message (y/n)"
+    read -n 1 -r response
+    echo
+    while true; do
+
+        # Check the response
+        case $response in
+            [Yy]* ) 
+                return 0                
+                ;;
+            [Nn]* ) 
+                return 1
+                ;;
+            * ) 
+                echo "Please answer y:yes or n:no."
+                ;;
+        esac
+    done
+}

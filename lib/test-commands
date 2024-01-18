@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+function commands_exist() {
+    for cmd in "$@"; do
+        if ! command_exists "$cmd"; then
+            return 1
+        fi
+    done
+    return 0
+}
+
+function command_exists() {
+    if ! command -v "$1" >/dev/null 2>&1; then
+        echo "Error: $cmd is not installed." >&2
+        return 1
+    fi
+}
