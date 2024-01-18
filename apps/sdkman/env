@@ -5,7 +5,7 @@ if [ ! -d "$SDKMAN_DIR" ]; then
     if ! commands_exist sed curl zip unzip; then
         echo "SDKMAN not installed."
         if confirm "Install dependencies: (sed curl zip unzip), and install?"; then
-            sudo apt install sed curl zip unzip
+            install_package "$CURRENT_OS" sed curl zip unzip
         fi
     fi
     if commands_exist sed curl zip unzip; then

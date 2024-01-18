@@ -8,13 +8,14 @@ build_wsl_notify () {
 # if the executable doesnt exist in the bin,
 # build the project, move the exe, and add to path
 if [ ! -d "$CONFIG/apps/wsl-notify-send/bin" ]; then
-    if commands_exist go; then
-        run_in_dir "$CONFIG/apps/wsl-notify-send/installation" build_wsl_notify
-    else
+    if ! commands_exist go; then
         echo "WSL Notify Send is not installed."
         if confirm "Install dependencies: golang and install?"; then
-            run_in_dir "$CONFIG/apps/wsl-notify-send/installation" build_wsl_notify
+            install_package "$CURRENT_OS" golang
         fi
+    fi
+    if commands_exist go; then
+        run_in_dir "$CONFIG/apps/wsl-notify-send/installation" build_wsl_notify
     fi
 fi
 

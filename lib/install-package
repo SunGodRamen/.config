@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+function install_package() {
+    curr_os=$1
+    package_names=$@
+    case "$(curr_os)" in
+        UBUNTU*)     
+            if command -v apt-get >/dev/null 2>&1; then
+                # Debian/Ubuntu
+                sudo apt-get update && sudo apt-get install -y "$package_names"
+                return 0
+            else
+                echo "Package manager not recognized. Please install $package_names manually."
+                return 1
+            fi
+            ;;
+        LINUX_OTHER*)
+            if command -v yum >/dev/null 2>&1; then
+                # RHEL/CentOS
+                sudo yum install -y "$package_names"
+                return 0
+            elif command -v dnf >/dev/null 2>&1; then
+                # Fedora
+                sudo dnf install -y "$package_names"
+                return 0
+            elif command -v pacman >/dev/null 2>&1; then
+                # Arch Linux
+                sudo pacman -Syu "$package_names"
+                return 0
+            elif command -v zypper >/dev/null 2>&1; then
+                # openSUSE
+                sudo zypper install "$package_names"
+                return 0
+            else
+                echo "Package manager not recognized. Please install $package_names manually."
+                return 1
+            fi
+            ;;
+        ANDROID*)
+            if [ -x "$(command -v pkg)" ]; then
+                # Termux on Android
+                pkg install "$package_names"
+                return 0
+            fi
+            ;;
+        MACOS*)
+            # macOS
+            if command -v brew >/dev/null 2>&1; then
+                brew install "$package_names"
+                return 0
+            else
+                echo "Homebrew not found. Please install Neovim manually."
+                return 1
+            fi
+            ;;
+        CYGWIN*|MINGW32*|MSYS*|MINGW*)
+            # Windows (Git Bash)
+            echo "Please install $package_names through the official website or Windows package manager."
+            return 1
+            ;;
+        *)
+            echo "Unknown operating system. Please install $package_names manually."
+            return 1
+            ;;
+    esac
+}
