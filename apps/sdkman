@@ -1,7 +1,0 @@
-# list aliases
-alias sdkj="echo -e 'sdkj8  -> Java 8.0.292-open\nsdkj11 -> Java 11.0.11-open\nsdkj17 -> Java 17.0.9-jbr'"
-
-# set java version
-alias sdkj8="sdk use java 8.0.292-open"
-alias sdkj11="sdk use java 11.0.11-open"
-alias sdkj17="sdk use java 17.0.9-jbr"
