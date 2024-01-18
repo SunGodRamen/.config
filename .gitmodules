@@ -10,3 +10,6 @@
 [submodule "apps/wsl-notify-send/installation"]
 	path = apps/wsl-notify-send/installation
 	url = git@github.com:stuartleeks/wsl-notify-send.git
+[submodule "apps/nvim/installation"]
+	path = apps/nvim/installation
+	url = git@github.com:neovim/neovim.git

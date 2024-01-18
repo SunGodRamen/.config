@@ -1,9 +1,26 @@
+# source the library
+source $CONFIG/script/source-all-in-dir $CONFIG/lib
+
+# check for nvim build directory
+if [ -d "$CONFIG/apps/nvim/build/bin" ]; then
+    # add nvim to the path
+    export PATH="$PATH:$CONFIG/apps/nvim/build/bin"
+fi
+# check for nvim command
 if ! commands_exist nvim; then
-    echo "Neovim is not installed."
-    if confirm "Install with packagemanager and continue?"; then
-        install_package "$CURRENT_OS" neovim
+    echo "Neovim is not on the path."
+    if confirm "Build nvim from module and continue?"; then
+        if ! commands_exist cmake gettext; then
+            install_package "$CURRENT_OS" cmake gettext
+        fi
+        if commands_exist cmake gettext; then
+            mkdir $CONFIG/apps/nvim/bin
+            run_in_dir "$CONFIG/apps/nvim/installation" make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=$CONFIG/apps/nvim/build
+            run_in_dir "$CONFIG/apps/nvim/installation" make install
+        fi
     fi
 fi
+# check for nvim command
 if commands_exist nvim; then
     # set the vim init to find the vim directory on the custom path
     export VIMINIT="let \$MYVIMRC='${HOME}/.config/apps/nvim/init.vim' | source \$MYVIMRC"
@@ -24,5 +41,9 @@ if commands_exist nvim; then
         UBUNTU)
             VIM_KEYMAP="Dvorak"
             ;;
+        *)
+            VIM_KEYMAP="Dvorak"
+            ;;
     esac
+    export VIM_KEYMAP
 fi
