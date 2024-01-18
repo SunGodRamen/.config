@@ -1,23 +1,16 @@
 # set sdkman directory
-# export SDKMAN_DIR="$CONFIG/apps/sdkman/dir"
-export SDKMAN_DIR="/home/ra/.config/apps/sdkman/installation/target/release"
+export SDKMAN_DIR="$CONFIG/apps/sdkman/dir"
 
-if [ ! -d "$SDKMAN_DIR/bin" ]; then
-    echo "SDKMAN! not installed yet."
-    cargo --version >/dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        echo "Rust must be installed to install sdkman."
-    else
-        current_dir=$(pwd)
-    fi
+if [ -d "$SDKMAN_DIR" ]; then
+    # source init script
+    [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+    # list aliases
+    alias sdkj="echo -e 'sdkj8  -> Java 8.0.292-open\nsdkj11 -> Java 11.0.11-open\nsdkj17 -> Java 17.0.9-jbr'"
+
+    # set java version
+    alias sdkj8="sdk use java 8.0.292-open"
+    alias sdkj11="sdk use java 11.0.11-open"
+    alias sdkj17="sdk use java 17.0.9-jbr"
 fi
-# source init script
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
-# list aliases
-alias sdkj="echo -e 'sdkj8  -> Java 8.0.292-open\nsdkj11 -> Java 11.0.11-open\nsdkj17 -> Java 17.0.9-jbr'"
-
-# set java version
-alias sdkj8="sdk use java 8.0.292-open"
-alias sdkj11="sdk use java 11.0.11-open"
-alias sdkj17="sdk use java 17.0.9-jbr"
