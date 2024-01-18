@@ -17,18 +17,12 @@ fi
 
 # Neovim
 if [ "$ENABLE_NEOVIM" = true ]; then
-    export VIMINIT="let \$MYVIMRC='${HOME}/.config/apps/nvim/init.vim' | source \$MYVIMRC"
-    export EDITOR='nvim'
-    alias v='nvim'
+    source $CONFIG/apps/nvim/env
 fi
 
 # SDKMAN
 if [ "$ENABLE_SDKMAN" = true ]; then
-    if [ -d "$HOME/.sdkman" ]; then
-        export SDKMAN_DIR="$HOME/.sdkman"
-        [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-        source $CONFIG/apps/sdkman
-    fi
+    source $CONFIG/apps/sdkman/env
 fi
 
 # Cassandra DB
@@ -41,5 +35,10 @@ fi
 
 # Rust
 if [ "$ENABLE_RUST" = true ]; then
-    source $CONFIG/apps/rust
+    source $CONFIG/apps/rust/env
+fi
+
+# Lynx
+if [ "$ENABLE_LYNX" = true ]; then
+    
 fi

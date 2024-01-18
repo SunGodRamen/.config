@@ -1,4 +1,12 @@
-# Set the environment variables for the current os
+# set the vim init to find the vim directory on the custom path
+export VIMINIT="let \$MYVIMRC='${HOME}/.config/apps/nvim/init.vim' | source \$MYVIMRC"
+# set the default editor to nvim
+export EDITOR='nvim'
+
+# aliases
+alias v='nvim'
+
+# Set the environment variables used in the config scripts
 case "$CURRENT_OS" in
     ANDROID)
         VIM_KEYMAP="Qwerty"
@@ -9,3 +17,4 @@ case "$CURRENT_OS" in
     UBUNTU)
         VIM_KEYMAP="Dvorak"
         ;;
+esac
