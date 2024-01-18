@@ -4,3 +4,4 @@ __pycache__/
 apps/nvim/vim-plug/autoload
 apps/sdkman/installation
 apps/wsl-notify-send/bin
+apps/nvim/build
