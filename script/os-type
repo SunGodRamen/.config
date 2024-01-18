@@ -30,7 +30,7 @@ case "$OSTYPE" in
 
     darwin*)
         # MacOS
-        echo "DARWIN"
+        echo "MACOS"
         ;;
 
     *)
