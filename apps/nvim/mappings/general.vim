@@ -4,6 +4,15 @@ let mapleader = "\<Space>"
 " Quickly save a file
 nnoremap <Leader>w :w<CR>
 
+" Quickly quit a file
+nnoremap <Leader>q :q<CR>
+
+" Find in file 
+nnoremap <Leader>f /
+
+" Visual mode mapping: Search for the highlighted text
+xnoremap <Leader>f y/<C-r>"<CR>
+
 " Close current buffer and keep the window open
 nnoremap <Leader>x :bp <BAR> sp <BAR> bn <BAR> bd!<CR>
 
@@ -31,3 +40,10 @@ nnoremap <Leader><Bar> :vsplit<CR>
 
 " Open a horizontal split
 nnoremap <Leader>_ :split<CR>
+
+" New line without insert
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
+" Copy selected to clipboard
+vnoremap yc :"+y<CR>
