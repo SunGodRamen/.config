@@ -1,0 +1,3 @@
+# Add local bin to path
+export PATH="/home/ra/.local/bin:$PATH"
+export PATH="/home/ra/.local/lib/python3.10/site-packages:$PATH"
