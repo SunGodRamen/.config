@@ -1,3 +1,6 @@
+# source the library
+source $CONFIG/script/source-all-in-dir $CONFIG/lib
+
 build_wsl_notify () {
     make build > /dev/null 2>&1
     mkdir "../bin"
