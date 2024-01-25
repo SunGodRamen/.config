@@ -2,8 +2,8 @@
 
 function install_package() {
     curr_os=$1
-    package_names=$@
-    case "$(curr_os)" in
+    package_names=${@:2}
+    case "$curr_os" in
         UBUNTU*)     
             if command -v apt-get >/dev/null 2>&1; then
                 # Debian/Ubuntu
