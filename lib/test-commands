@@ -1,17 +1,22 @@
 #!/usr/bin/env bash
 
 function commands_exist() {
+    declare -A missing_commands
     for cmd in "$@"; do
         if ! command_exists "$cmd"; then
-            return 1
+            missing_commands+="$cmd "
         fi
     done
-    return 0
+    if [ ${#missing_commands[@]} -gt 0 ]; then
+	echo "${missing_commands[*]}"
+	return 1
+    else
+        return 0
+    fi
 }
 
 function command_exists() {
     if ! command -v "$1" >/dev/null 2>&1; then
-        echo "Error: $cmd is not installed." >&2
         return 1
     fi
 }
