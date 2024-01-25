@@ -1,8 +1,8 @@
 " init.vim
-let s:vim_dir_path = "~/.config/apps/nvim"
 
 " used to abbreviate vim dir around vim config scripts
-let g:vim_dir = expand(s:vim_dir_path)
+let g:vim_dir = expand("~/.config/apps/nvim")
+
 " add custom vim dir to runtime path
 let &runtimepath = g:vim_dir . ',' . &runtimepath
 
