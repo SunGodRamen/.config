@@ -43,11 +43,6 @@ if [ "$ENABLE_RUST" = true ]; then
     source $CONFIG/apps/rust/env
 fi
 
-# Lynx
-if [ "$ENABLE_LYNX" = true ]; then
-    source $CONFIG/apps/lynx/env
-fi
-
 # Notify send
 if [ "$ENABLE_NOTIFYSEND" = true ]; then
     source $CONFIG/apps/wsl-notify-send/env
