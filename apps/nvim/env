@@ -2,10 +2,13 @@
 source $CONFIG/script/source-all-in-dir $CONFIG/lib
 
 # check for nvim build directory
-if [ -d "$CONFIG/apps/nvim/build/bin" ]; then
-    # add nvim to the path
-    export PATH="$PATH:$CONFIG/apps/nvim/build/bin"
+if [ ! -d "$CONFIG/apps/nvim/build/bin" ]; then
+    mkdir $CONFIG/apps/nvim/bin
 fi
+
+# add nvim to the path
+export PATH="$PATH:$CONFIG/apps/nvim/build/bin"
+
 # check for nvim command
 if ! commands_exist nvim; then
     echo "Neovim is not on the path."
@@ -14,7 +17,6 @@ if ! commands_exist nvim; then
             install_package "$CURRENT_OS" cmake gettext
         fi
         if commands_exist cmake gettext; then
-            mkdir $CONFIG/apps/nvim/bin
             run_in_dir "$CONFIG/apps/nvim/installation" make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=$CONFIG/apps/nvim/build
             run_in_dir "$CONFIG/apps/nvim/installation" make install
         fi
@@ -27,19 +29,30 @@ if commands_exist nvim; then
     # set the default editor to nvim
     export EDITOR='nvim'
 
-    # aliases
-    alias v='nvim'
-
     # Set the environment variables used in the config scripts
     case "$CURRENT_OS" in
         ANDROID)
             VIM_KEYMAP="Qwerty"
             ;;
         WINDOWS)
-            VIM_KEYMAP="Dvorak"
+            case "$(hostname)" in
+                DESKTOP-SMFOB2U)
+                    VIM_KEYMAP="Qwerty"
+                    ;;
+                *)    
+                    VIM_KEYMAP="Dvorak"
+                    ;;
+            esac
             ;;
         UBUNTU)
-            VIM_KEYMAP="Dvorak"
+            case "$(hostname)" in
+                DESKTOP-SMFOB2U)
+                    VIM_KEYMAP="Qwerty"
+                    ;;
+                *)    
+                    VIM_KEYMAP="Dvorak"
+                    ;;
+            esac
             ;;
         *)
             VIM_KEYMAP="Dvorak"
