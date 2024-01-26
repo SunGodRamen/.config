@@ -21,7 +21,7 @@ vnoremap p "_dP
 nnoremap <Esc><Esc> :noh<CR>
 
 " Open terminal in a horizontal split
-nnoremap <Leader>` :split<CR>:term<CR>
+nnoremap <Leader>` :10split<CR>:term<CR>
 
 " Easily start a search and replace for the word under cursor
 nnoremap <Leader><F2> :%s/\<<C-r><C-w>\>/
@@ -31,3 +31,10 @@ nnoremap <Leader><Bar> :vsplit<CR>
 
 " Open a horizontal split
 nnoremap <Leader>_ :split<CR>
+
+" Increase height of horizontal split
+nnoremap _ :resize +5<CR>
+
+" Increase height of horizontal split
+nnoremap - :resize -5<CR>
+

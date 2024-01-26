@@ -16,6 +16,9 @@ set expandtab       " Expand tabs to spaces
 set shiftwidth=4    " Indent/outdent by four spaces
 set autoindent      " Auto indent new lines
 
+" fuckin bell
+set belloff=all
+
 " Encoding and file formats
 set encoding=utf-8
 

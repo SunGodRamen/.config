@@ -10,8 +10,6 @@ if exists('g:enable_airline') && g:enable_airline
     " Set a theme
     let g:airline_theme = 'dark'
 
-    execute "source " . g:vim_dir . "/scripts/color-scheme-assist.vim"
-
 endif
 
 " ALE
@@ -50,4 +48,19 @@ endif
 
 if exists('g:tree_sitter') && g:tree_sitter
     execute "luafile " . g:vim_dir . "/config/treesitter-config.lua"
+endif
+
+" Easymotion
+if exists('g:enable_easymotion') && g:enable_easymotion
+    " Leader key twice activates easymotion
+    nmap <Leader><Leader> <Plug>(easymotion-prefix)
+endif
+
+if exists('g:nvim_notify') && g:nvim_notify
+    function! NotifyBell()
+        call notify#message("Alert", v:null, "error")
+    endfunction
+      
+    set belloff=all
+    autocmd GUIEnter * set bellfunc=NotifyBell
 endif

@@ -1,10 +1,3 @@
-" Easymotion
-if exists('g:enable_easymotion') && g:enable_easymotion
-    " Leader key twice activates easymotion
-    nmap <Leader><Leader> <Plug>(easymotion-prefix)
-endif
-
-
 " Layout specific mappings
 
 function SetPluginMapping_Dvorak()
