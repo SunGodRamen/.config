@@ -25,7 +25,6 @@ if exists('g:enable_rainbow_parens') && g:enable_rainbow_parens
     let g:rainbow_delimiters = {
         \ 'strategy': {
             \ '': rainbow_delimiters#strategy.global,
-            \ 'vim': rainbow_delimiters#strategy.local,
         \ },
         \ 'query': {
             \ '': 'rainbow-delimiters',
