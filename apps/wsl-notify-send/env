@@ -39,3 +39,4 @@ if [ -d "$CONFIG/apps/wsl-notify-send/bin" ]; then
         return $result
     }
 fi
+
