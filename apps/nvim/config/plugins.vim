@@ -47,6 +47,6 @@ if exists('g:enable_rainbow_parens') && g:enable_rainbow_parens
 
 endif
 
-if exists('g:tree_sitter') && g:tree_sitter
+if exists('g:enable_tree_sitter') && g:enable_tree_sitter
     execute "luafile " . g:vim_dir . "/config/treesitter-config.lua"
 endif
