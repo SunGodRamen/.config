@@ -76,6 +76,9 @@ endif
 
 if exists('g:enable_vimwiki') && g:enable_vimwiki
     Plug 'vimwiki/vimwiki'
+    set nocompatible
+    filetype plugin on
+    syntax on
 endif
 
 call plug#end()
