@@ -4,69 +4,77 @@ let g:enable_coc = 0
 let g:enable_airline = 1
 let g:enable_ale = 1
 let g:enable_surround = 1
-let g:tree_sitter = 1
 let g:enable_rainbow_parens = 1
 let g:enable_commentary = 1
 let g:enable_easymotion = 1
 let g:enable_gitgutter = 1
 let g:enable_deoplete = 1
 let g:enable_rust = 1
+let g:tree_sitter = 1
+let g:enable_vimwiki = 1
+
+" disable termux incompatible plugins
+let s:env_os = getenv('CURRENT_OS')
+if exists(s:env_os) && s:env_os == 'ANDROID'
+    let g:tree_sitter = 0
+    let g:enable_rainbow_parens = 0 
+endif
 
 " Initialize VimPlug
 execute "source " . g:vim_dir . "/vim-plug/plug.vim"
 call plug#begin(g:vim_dir . '/vim-plug/autoload')
 
 " Conditional plugin loading
-if g:enable_nerdtree
+if exists(g:enable_nerdtree) && g:enable_nerdtree
     Plug 'preservim/nerdtree'
 endif
 
-if g:enable_coc
+if exists(g:enable_coc) && g:enable_coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
-if g:enable_airline
+if exists(g:enable_airline) && g:enable_airline
     Plug 'vim-airline/vim-airline'
 endif
 
-if g:enable_ale
+if exists(g:enable_ale) && g:enable_ale
     Plug 'w0rp/ale'
 endif
 
-if g:enable_surround
+if exists(g:enable_surround) && g:enable_surround
     Plug 'tpope/vim-surround'
 endif
 
-if g:tree_sitter
+if exists(g:tree_sitter) && g:tree_sitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 endif
 
-if g:enable_rainbow_parens
+if exists(g:enable_rainbow_parens) && g:enable_rainbow_parens
     Plug 'HiPhish/rainbow-delimiters.nvim'
 endif
 
-if g:enable_commentary
+if exists(g:enable_commentary) && g:enable_commentary
     Plug 'tpope/vim-commentary'
 endif
 
-if g:enable_easymotion
+if exists(g:enable_easymotion) && g:enable_easymotion
     Plug 'easymotion/vim-easymotion'
 endif
 
-if g:enable_gitgutter
+if exists(g:enable_gitgutter) && g:enable_gitgutter
     Plug 'airblade/vim-gitgutter'
 endif
 
-if g:enable_deoplete
+if exists(g:enable_deoplete) && g:enable_deoplete
     Plug 'Shougo/deoplete.nvim'
 endif
 
-if g:enable_rust
+if exists(g:enable_rust) && g:enable_rust
     Plug 'rust-lang/rust.vim'
 endif
 
-if g:enable_vimwiki
+if exists(g:enable_vimwiki) && g:enable_vimwiki
     Plug 'vimwiki/vimwiki'
 endif
 
