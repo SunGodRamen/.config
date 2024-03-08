@@ -13,7 +13,7 @@ function! ToggleCheckbox()
         " Find the position of '['
         execute search('\[', 'c', line('.'))
         " insert 'x' after the bracket
-        execute "normal! llli x\e`[x`]lx"
+        execute "normal! lllix\elx"
 
     " Check if the line has an occupied checkbox '[x]'
     elseif getline('.') =~ '^\s*-\s\[.\]'
@@ -22,8 +22,8 @@ function! ToggleCheckbox()
         " Find the position of '['
         execute search('\[', 'c', line('.'))
 
-        " add a space and remove the 'x'
-        execute "normal! llli  \e`[xlx"
+        " add a space and remove the checkbox content 
+        execute "normal! lllxi \e"
 
    endif
 
