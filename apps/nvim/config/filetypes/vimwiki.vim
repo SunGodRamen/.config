@@ -8,21 +8,20 @@ function! ToggleCheckbox()
 
     " Check if the line has an empty checkbox '[ ]'
     if getline('.') =~ '^\s*-\s\[\s\]'
+        "Move to the beginning of the line
+        normal! 0
         " Find the position of '['
-        let l:bracket_pos = match(getline('.'), '\[')
-
-        " Go to the position right after '['
-        execute 'normal! '.l:bracket_pos 
+        execute search('\[', 'c', line('.'))
         " insert 'x' after the bracket
         execute "normal! llli x\e`[x`]lx"
 
     " Check if the line has an occupied checkbox '[x]'
     elseif getline('.') =~ '^\s*-\s\[.\]'
+        " Move to the beginning of the line
+        normal! 0
         " Find the position of '['
-        let l:bracket_pos = match(getline('.'), '\[')
+        execute search('\[', 'c', line('.'))
 
-        " Go to the position right after '['
-        execute 'normal! '.l:bracket_pos
         " add a space and remove the 'x'
         execute "normal! llli  \e`[xlx"
 
