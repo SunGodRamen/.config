@@ -7,6 +7,9 @@ nnoremap <Leader>ww :w<CR>
 " Quickly write quit a file
 nnoremap <Leader>wq :wq<CR>
 
+" Quickly quit a file
+nnoremap <Leader>qq :q<CR>
+
 " Quickly force quit a file
 nnoremap <Leader>qa :qa!<CR>
 
