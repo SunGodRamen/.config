@@ -2,7 +2,13 @@
 let mapleader = "\<Space>"
 
 " Quickly save a file
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>ww :w<CR>
+
+" Quickly write quit a file
+nnoremap <Leader>wq :wq<CR>
+
+" Quickly force quit a file
+nnoremap <Leader>qa :qa!<CR>
 
 " Close current buffer and keep the window open
 nnoremap <Leader>x :bp <BAR> sp <BAR> bn <BAR> bd!<CR>
@@ -31,3 +37,7 @@ nnoremap <Leader><Bar> :vsplit<CR>
 
 " Open a horizontal split
 nnoremap <Leader>_ :split<CR>
+
+" Grep word under cursor
+nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
+
