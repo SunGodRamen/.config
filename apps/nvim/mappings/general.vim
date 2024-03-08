@@ -38,6 +38,7 @@ nnoremap <Leader><Bar> :vsplit<CR>
 " Open a horizontal split
 nnoremap <Leader>_ :split<CR>
 
-" Grep word under cursor
-nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
+" Horizontal scrolling
+nnoremap <A-Left> zh
+nnoremap <A-Right> zl
 
