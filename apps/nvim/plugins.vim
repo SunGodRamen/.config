@@ -39,7 +39,7 @@ endif
 
 if g:tree_sitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+"    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 endif
 
 if g:enable_rainbow_parens
@@ -64,6 +64,10 @@ endif
 
 if g:enable_rust
     Plug 'rust-lang/rust.vim'
+endif
+
+if g:enable_vimwiki
+    Plug 'vimwiki/vimwiki'
 endif
 
 call plug#end()
