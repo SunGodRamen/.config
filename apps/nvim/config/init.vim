@@ -3,3 +3,4 @@
 execute "source " . g:vim_dir . "/config/plugins.vim"
 execute "source " . g:vim_dir . "/config/general.vim"
 execute "source " . g:vim_dir . "/config/filetypes/init.vim"
+execute "source " . g:vim_dir . "/config/chords.vim"

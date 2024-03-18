@@ -1,7 +1,3 @@
-" Coc.nvim
-if exists('g:enable_coc') && g:enable_coc
-endif
-
 " vim-airline
 if exists('g:enable_airline') && g:enable_airline
     " Enable powerline fonts

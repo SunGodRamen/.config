@@ -1,30 +1,30 @@
 UI Elements:
-Cursor: The color of the cursor.
-CursorLine: The color of the line under the cursor.
-CursorColumn: The color of the column under the cursor.
-LineNr: The color of the line numbers.
-SignColumn: The color of the sign column (used for things like breakpoints).
-StatusLine: The color of the status line.
-StatusLineNC: The color of the non-current status line.
-VertSplit: The color of the vertical split lines between windows.
-ColorColumn: The color of the column set by colorcolumn.
-MatchParen: The color of matching parentheses.
-NonText: The color of non-text characters, like end-of-line indicators.
-Visual: The color of the visual selection.
+Cursor:       cursor
+CursorLine:   line under the cursor
+CursorColumn: column under the cursor
+LineNr:       line numbers
+SignColumn:   sign column (used for things like breakpoints)
+StatusLine:   status line
+StatusLineNC: non-current status line
+VertSplit:    vertical split lines between windows
+ColorColumn:  column set by colorcolumn
+MatchParen:   matching parentheses
+NonText:      non-text characters, like end-of-line indicators
+Visual:       visual selection
 
-Syntax Highlighting for Specific Code Elements:
-Function: The color of function names.
-Identifier: The color of identifiers, like variable names.
-PreProc: The color of preprocessor statements.
-Type: The color of type declarations.
-Special: The color of special elements, which could include special characters in strings.
-Underlined: The color of underlined text.
-Error: The color of error text.
-Todo: The color of todo comments.
-Constant: The color of constants.
-Number: The color of numbers.
-Boolean: The color of boolean values.
-Operator: The color of operators.
+Syntax        Highlighting for Specific Code Elements:
+Function:     function names
+Identifier:   identifiers, like variable names
+PreProc:      preprocessor statements
+Type:         type declarations
+Special:      special elements, which could include special characters in strings
+Underlined:   underlined text
+Error:        error text
+Todo:         todo comments
+Constant:     constants
+Number:       numbers
+Boolean:      boolean values
+Operator:     operators
 
 DiffAdd
 DiffChange
