@@ -1,4 +1,4 @@
-execute "source " . g:vim_dir . "/config/chording.vim"
+execute "source " . g:config_dir . "/config/chording.vim"
 
 " Set up chord mappings when Vim enters
 autocmd VimEnter * call s:SetupChordMappings()

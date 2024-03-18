@@ -5,9 +5,6 @@ if exists('g:enable_airline') && g:enable_airline
 
     " Set a theme
     let g:airline_theme = 'dark'
-
-    execute "source " . g:vim_dir . "/scripts/color-scheme-assist.vim"
-
 endif
 
 " ALE
@@ -44,5 +41,5 @@ if exists('g:enable_rainbow_parens') && g:enable_rainbow_parens
 endif
 
 if exists('g:enable_tree_sitter') && g:enable_tree_sitter
-    execute "luafile " . g:vim_dir . "/config/treesitter-config.lua"
+    execute "luafile " . g:config_dir . "/config/treesitter-config.lua"
 endif

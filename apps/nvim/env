@@ -23,7 +23,8 @@ fi
 # check for nvim command
 if commands_exist nvim; then
     # set the vim init to find the vim directory on the custom path
-    export VIMINIT="let \$MYVIMRC='${HOME}/.config/apps/nvim/init.vim' | source \$MYVIMRC"
+    export VIMCONFIG_V="v2"
+    export VIMINIT="let \$MYVIMRC='${HOME}/.config/apps/nvim/configs/${VIMCONFIG_V}/init.vim' | source \$MYVIMRC"
     # set the default editor to nvim
     export EDITOR='nvim'
 
